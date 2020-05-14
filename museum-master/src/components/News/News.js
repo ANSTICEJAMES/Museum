@@ -6,10 +6,8 @@ import React from 'react';
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import * as serviceWorker from '../../serviceWorker'
-<<<<<<< HEAD
-=======
 
->>>>>>> 0849a19e26a37d6e6ae21e7afb0c7ff2ab1db7a7
+
 
 
 
@@ -17,7 +15,7 @@ import * as serviceWorker from '../../serviceWorker'
 
 function News () {
     return (
-      <div classNameName='News'>
+      <div className='News'>
         <Header/>
             <div className="content">
 
@@ -26,16 +24,12 @@ function News () {
                 </div>
                 
                 <div className="card-news-body">
-<<<<<<< HEAD
-                    <img src={ph3} class="news-img" alt="иконка новостей"></img>
-=======
                     <img src={ph3} className="news-img" alt="иконка новости"></img>
->>>>>>> 0849a19e26a37d6e6ae21e7afb0c7ff2ab1db7a7
                     <h5 className="news-text">НОВОСТИ</h5>
                 </div>
                 <hr></hr>
 
-                <div classNameName="text">
+                <div className="text">
                     <Text />
                 </div>
       

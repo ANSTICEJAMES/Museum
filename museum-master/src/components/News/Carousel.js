@@ -14,33 +14,18 @@ function Carousel() {
               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
           </ol>
-<<<<<<< HEAD
-          <div class="carousel-inner">
-              <div class="carousel-item active">
-                  <img src={image0} class="d-block w-100" alt="1 фото карусельки"></img>
-              </div>
-              <div class="carousel-item">
-                  <img src={image1} class="d-block w-100" alt="2 фото карусельки"></img>
-              </div>
-              <div class="carousel-item">
-                  <img src={image2} class="d-block w-100" alt="3 фото карусельки"></img>
-              </div>
-              <div class="carousel-item">
-                  <img src={image3} class="d-block w-100" alt="4 фото карусельки"></img>
-=======
           <div className="carousel-inner">
               <div className="carousel-item active">
-                  <img src={image0} className="d-block w-100" alt="1 фото карусели"></img>
+                  <img src={image0} className="d-block w-100" alt="1 пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"></img>
               </div>
               <div className="carousel-item">
-                  <img src={image1} className="d-block w-100" alt="2 фото карусели"></img>
+                  <img src={image1} className="d-block w-100" alt="2 пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"></img>
               </div>
               <div className="carousel-item">
-                  <img src={image2} className="d-block w-100" alt="3 фото карусели"></img>
+                  <img src={image2} className="d-block w-100" alt="3 пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"></img>
               </div>
               <div className="carousel-item">
-                  <img src={image3} className="d-block w-100" alt="4 фото карусели"></img>
->>>>>>> 0849a19e26a37d6e6ae21e7afb0c7ff2ab1db7a7
+                  <img src={image3} className="d-block w-100" alt="4 пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"></img>
               </div>
           </div>
                 <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
