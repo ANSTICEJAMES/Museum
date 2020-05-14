@@ -1,0 +1,33 @@
+
+.head {
+  background-color: #f7f7f7; /* Цвет фона */
+  height: 105px;
+  color: #002b58;
+  position: fixed; /* Фиксированное положение */
+  width: 100%; /* Ширина слоя */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+   box-shadow: 0 0 20px rgba(0,0,0,1);
+}
+
+.info {
+    align-items: center;
+    text-align: center;
+    width: 800px; /* Ширина элемента в пикселах */
+}
+
+.nav {
+  width: 400px;
+  height: 40px; /* Ширина элемента в пикселах */
+  align-items: center;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+ .name {
+  text-align: center;
+}

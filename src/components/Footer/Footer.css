@@ -1,0 +1,38 @@
+.footer {
+   font-family: Verdana, Arial, Helvetica, sans-serif;
+
+  left: 0; bottom: 0; /* Левый нижний угол */
+  padding: 10px; /* Поля вокруг текста */
+  background: #002b58; /* Цвет фона */
+  color: #fff; /* Цвет текста */
+  width: 100%; /* Ширина слоя */
+
+}
+
+.contact {
+  font-size: 10pt;  align-items: center;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  height: 55px;
+
+}
+
+.adress {
+
+  width: 400px;
+  height: 55px;
+}
+.phone {
+  text-align: right;
+  width: 400px;
+  height: 30px;
+}
+
+.copyright {
+  font-size: 6pt;
+  margin: auto;
+  width: 450px;
+  text-align: center;
+}

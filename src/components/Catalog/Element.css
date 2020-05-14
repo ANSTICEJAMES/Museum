@@ -1,0 +1,9 @@
+.card {
+    width: 18rem;
+}
+
+li {
+    display:inline;
+    list-style-type: none;
+}
+

@@ -1,0 +1,11 @@
+.content {
+  padding-top: 105px;
+  padding-bottom: 50px; /*нижний внутренний отступ*/
+}
+
+.carousel {
+  height: 350px; /* Высота блока */
+  max-width: 100%;
+  overflow: hidden;
+  margin: auto;
+}

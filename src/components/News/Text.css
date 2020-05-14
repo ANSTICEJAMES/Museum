@@ -1,0 +1,15 @@
+.card-deck{
+	margin-bottom: 50px;
+	margin-left: 20%;
+	margin-right: 20%;
+
+}
+.calendar-img{
+	float: left;
+	max-height: 25px;
+	max-width: 25px;
+}
+.calendar-text{
+	float: left;
+	margin-left: 15px;
+}
