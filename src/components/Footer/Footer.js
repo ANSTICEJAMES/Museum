@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css';
-import iconmap from './iconmap.png';
-import iconphone from './iconphone.png';
+import iconmap from '../../images/footer/iconmap.png';
+import iconphone from '../../images/footer/iconphone.png';
 
 
 function Footer() {

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import './Exhibit.css'
-import logo from './exhibit.png';
+import logo from '../../images/exhibit/exhibit.png';
 import { Link } from "react-router-dom"
 import axios from 'axios'
 

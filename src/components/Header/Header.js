@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
-import logo from './logo.JPG';
-import sfedu from './sfedu.png';
+import logo from '../../images/header/logo.JPG';
+import sfedu from '../../images/header/sfedu.png';
 
 import { Link } from "react-router-dom"
 
