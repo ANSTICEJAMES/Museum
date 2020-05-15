@@ -1,0 +1,111 @@
+.Catalog_stile{
+    height: 1500px;
+}
+
+.content{
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-bottom: 100px;
+}
+
+
+h1 { 
+    text-align: center }
+h3 { 
+    text-align: center }
+
+
+.page-title {
+    margin: 37px 0 80px;
+    margin-bottom: 100px;
+    display: inline-block;
+    width: 100%;
+
+}
+
+.blok{
+    height: 600px;
+    padding: 100px 10% 200px;
+    line-height: 100px;
+    font-size: 20px;
+    margin-bottom: 300px;
+    	
+    
+}
+.blok a:hover {background: #0078BF; color: #fff;}
+.case_1{
+    width:30%;
+    height:100%;
+    background: url("http://cs614726.vk.me/v614726246/4a02/300wj_aFOK4.jpg") ; 
+    text-align: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    text-align: center;
+    float: left;
+}
+
+.case_2{
+    width:25%;
+    height:100%;
+    float:left;
+    overflow: hidden;
+}
+
+.vozm {
+    width:25%;
+    height:100%;
+    float:left;
+    overflow: hidden;
+}
+.child {
+    width: 105%;
+    height: 105%;
+    background-position: center;
+    background-size: cover;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    
+}
+.vozm:hover .child, .vozm:focus .child {
+    -ms-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+   
+}
+
+.vozm .red_bl {
+    width:30px;
+    height:6px;
+    background-color:#ffffff;
+}
+.bg-1 {background-image: url("https://sun9-51.userapi.com/c858024/v858024008/1f8600/kmIrkevfHr4.jpg");margin-top: -222px;}
+.bg-2 {background-image: url("https://sun9-71.userapi.com/c858020/v858020209/1f12ea/NxBIcQ1FRx4.jpg");margin-top: -222px;}  
+.bg-3 {background-image: url("https://sun9-43.userapi.com/c858020/v858020209/1f12f3/31tsHrCdVZE.jpg");margin-top: -222px;}
+.bg-4 {background-image: url("https://sun9-59.userapi.com/c857032/v857032550/18f7a3/mtwBUDmcDtA.jpg");margin-top: -222px;}
+.bg-5 {background-image: url("https://sun9-66.userapi.com/c857032/v857032550/18f826/9-XDnz5MObE.jpg");margin-top: -222px;}  
+.bg-6 {background-image: url("https://sun9-12.userapi.com/c857032/v857032550/18f726/E3Kh_hmTqeU.jpg");margin-top: -222px;}
+.bg-7 {background-image: url("https://sun9-9.userapi.com/c857032/v857032550/18f813/Fy8EoJ08gOw.jpg");margin-top: -222px;}
+.bg-8 {background-image: url("https://sun9-7.userapi.com/c857032/v857032550/18f7d8/pnFeXnCEOG4.jpg");margin-top: -222px;}  
+.bg-9 {background-image: url("https://sun9-60.userapi.com/c857032/v857032550/18f788/uX7VXLXAXtY.jpg");margin-top: -222px;}
+
+
+
+
+
+
+.vposf {
+    position:relative;
+    z-index:9999;
+}
+.blok_title p{
+    margin: 100px auto;
+    color:rgb(255, 255, 255);
+    font-weight:bold;
+    font-size:25px;
+    line-height:21px;
+    text-align: center;
+}
