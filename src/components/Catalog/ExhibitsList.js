@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import sonata from '../Exhibit/sonata.jpg'
-import './ExhibitList.css'
+import './ExhibitsList.css'
+import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
 import axios from 'axios'
 import Element from '../Catalog/Element'
 
@@ -25,7 +26,7 @@ export  class ExhibitsList extends Component {
 
     async getExhibits(uid) {
         //const exhibits = await axios.get(`${process.env.REACT_APP_API_URL}exhibits/${uid}`);
-        const exhibits = await axios.get(`${process.env.REACT_APP_API_URL}/exhibits/?limit=6&offset=0&categories=2`);
+        const exhibits = await axios.get(`${process.env.REACT_APP_API_URL}/exhibits/?limit=6&offset=0&categories=5`);
         //const {name, description, categories, image} = exhibit.data.responseData;
         console.log('111111111111111',exhibits);
 
@@ -41,20 +42,27 @@ export  class ExhibitsList extends Component {
     render() {
 
         return (
-            
-            <ul> 
-               { 
-                    this.state.exhibits.map(exhibit=>
-                    {
-                        return (
-                            
-                            <Element key={exhibit.uid} exhibit={exhibit} />
-                        ) 
-                    }
-                )
-            }
-            </ul>
+            <div className='Category'>
+              <Header/>
+              <div className="contentList">
+        <div className="nameCategory"><h3>categories</h3></div>
+                <ul className="grid-container"> 
+                { 
+                        this.state.exhibits.map(exhibit=>
+                        {
+                            return (
+                                
+                                <Element key={exhibit.uid} exhibit={exhibit} />
+                            ) 
+                        }
+                    )
+                }
+                </ul>
+              </div>
+              <Footer/>
+            </div>
         )
+    
     }
 
 }

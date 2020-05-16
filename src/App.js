@@ -5,6 +5,9 @@ import Home from './components/Home/Home'
 import News from './components/News/News'
 import Catalog from './components/Catalog/Catalog'
 import Exhibit from './components/Exhibit/Exhibit'
+import ExhibitsList from './components/Catalog/ExhibitsList'
+import Element from './components/Catalog/Element'
+
 
 class App extends Component {
   render() {
@@ -17,6 +20,8 @@ class App extends Component {
           <Route history={history} path='/news' component={News} />
           <Route history={history} path='/catalog' component={Catalog} />
           <Route history={history} path='/exhibit' component={Exhibit} />
+          <Route history={history} path='/ExhibitsList' component={ExhibitsList} />
+          <Route history={history} path='/Element' component={Element} />
           <Redirect from='/' to='/home'/>
         </Switch>
       </div>

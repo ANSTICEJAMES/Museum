@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
-import './Exhibit.css'
-import sonata from './sonata.jpg'
-import logo from './exhibit.png';
+import logo from './exhibit.png'
 import { Link } from "react-router-dom"
 import axios from 'axios'
 import  '../Catalog/ExhibitsList'
+import  './Exhibit.css'
 
 
 class Exhibit extends Component {
@@ -36,7 +35,7 @@ class Exhibit extends Component {
 
  async getExhibit(uid) {
     //const exhibit = await axios.get(`${process.env.REACT_APP_API_URL}exhibits/${uid}`);
-    const exhibit = await axios.get(`${process.env.REACT_APP_API_URL}/exhibits/${25}`);
+    const exhibit = await axios.get(`${process.env.REACT_APP_API_URL}/exhibits/${45}`);
     const {name, description, categories, image} = exhibit.data.responseData;
    console.log("ыыыыыыыыыыыыыыыыыыыыы", name, description, categories, image );
    this.setState({img:image.slice()},()=> console.log(this.state));
@@ -50,7 +49,7 @@ class Exhibit extends Component {
   return (
     <div className='Exhibit'>
       <Header/>
-      <div className="content">
+      <div className="contentExhibit">
         <div className="nameplate">
           <div className="card-news-body">
             <img src={logo} className="news-img"></img>
@@ -58,10 +57,12 @@ class Exhibit extends Component {
           </div>
           <hr></hr>
         </div>
-        <div className="namex"> <div className="namexx"><h4>{this.state.name}</h4></div></div>
+        <div className="namex"> <div className="namexx"><h4>название</h4></div></div>
+        {/* <div className="namex"> <div className="namexx"><h4>{this.state.name}</h4></div></div> */}
         <div className="common">
           <div className="about"><h6>
-            
+            Описание экспоната
+
             </h6></div>
           <div className="photo"> <img src={`${process.env.REACT_APP_API_URL}/${this.state.img[0]}`} width="500" height="350" ></img>
           

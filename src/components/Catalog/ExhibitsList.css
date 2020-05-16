@@ -1,0 +1,24 @@
+.contentList {
+    padding-top: 130px;
+    padding-bottom: 50px; /*нижний внутренний отступ*/
+    min-height: 600px;
+    background: rgb(236, 245, 255);
+  }
+  
+ .nameCategory {
+  padding-top: 10px;
+  padding-bottom: 30px;
+ }
+ .nameCategory h3 {
+  color: #002b58;
+  text-align: center;
+ }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: calc(10px + 1%);
+    grid-template-areas: ". . ." ". . ." ". . ." ". . .";
+  }
+  

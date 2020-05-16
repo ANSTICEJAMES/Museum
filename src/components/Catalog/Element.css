@@ -1,9 +1,10 @@
 
 .card {
     width: 18rem;
+    color: #002b58;
 }
 
 li {
-    display:inline;
+    display: inline;
     list-style-type: none;
 }
