@@ -1,3 +1,9 @@
+.background{
+
+    height: 100vh;
+    background: rgb(236, 245, 255);
+}
+
 .container {
     position: absolute;
     width: 100px;
