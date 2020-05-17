@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import {Route, Switch, Redirect, withRouter} from "react-router-dom"
+import {Route, Switch, withRouter} from "react-router-dom"
 import './App.css';
 import Home from './components/Home/Home'
 import News from './components/News/News'
 import Catalog from './components/Catalog/Catalog'
-import Exhibit from './components/Exhibit/Exhibit'
-import ExhibitsList from './components/Catalog/ExhibitsList'
-import Element from './components/Catalog/Element'
+import ExhibitRoute from './components/Exhibit/ExhibitRoute'
 
 
 class App extends Component {
@@ -16,13 +14,12 @@ class App extends Component {
     return (
       <div className="App">
         <Switch>
-          <Route history={history} path='/home' component={Home} />
+          <Route exact history={history} path='/' component={Home} />
           <Route history={history} path='/news' component={News} />
           <Route history={history} path='/catalog' component={Catalog} />
-          <Route history={history} path='/exhibit' component={Exhibit} />
-          <Route history={history} path='/ExhibitsList' component={ExhibitsList} />
-          <Route history={history} path='/Element' component={Element} />
-          <Redirect from='/' to='/home'/>
+          <Route history={history} strict path='/exhibit' component={ExhibitRoute} />
+
+          <Route history={history} path='*' children={()=><h2>Not found</h2>} />
         </Switch>
       </div>
     );

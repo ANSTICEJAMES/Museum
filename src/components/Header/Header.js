@@ -10,7 +10,7 @@ import { Link } from "react-router-dom"
 function Header() {
     return (
       <div className="head">
-        <Link to="/home"><div className="logo" alt = "Логотип"><img src={logo} alt = "Логотип" ></img></div></Link>
+        <Link to="/"><div className="logo" alt = "Логотип"><img src={logo} alt = "Логотип" ></img></div></Link>
         <div className="info">
           <div className="name"> <h3>ПОЛИТЕХНИЧЕСКИЙ МУЗЕЙ ЮФУ</h3></div>
           <div className="nav">
@@ -19,7 +19,8 @@ function Header() {
             <a href="http://sfedu.ru/">Официальный сайт ЮФУ</a>
           </div>
         </div>
-        <div className="logo_sfedu"><img height="100px" src={sfedu} alt = "Логотип"></img></div>
+          <a href="http://sfedu.ru/">
+          <div className="logo_sfedu"><img height="100px" src={sfedu} alt = "Логотип"></img></div></a>
       </div>
     );
 }

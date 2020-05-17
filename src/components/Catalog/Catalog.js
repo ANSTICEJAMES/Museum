@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
-import Katalog from './catcontent.js'
 import './Catalog1.css'
 import * as serviceWorker from '../../serviceWorker';
+
 
 
 function Catalog() {
@@ -15,7 +15,7 @@ function Catalog() {
         <div className="gridnews blok">
 
           <div className="itemNews">
-            <a href="https://sfedu.ru/" className="knopka">
+            <a href="/exhibit/exhibitslist/?limit=10&offset=0&categories=awards" className="knopka">
               <div className="vozm">
                 <div className="vposf">
                   <div className="blok_title">
@@ -28,7 +28,7 @@ function Catalog() {
           </div>
 
           <div className="itemNews">
-            <a href="https://sfedu.ru/" className="knopka">
+            <a href="/exhibit/exhibitslist/?limit=10&offset=0&categories=photo" className="knopka">
               <div className="vozm">
                 <div className="vposf">
                   <div className="blok_title">
@@ -40,18 +40,19 @@ function Catalog() {
             </a>
           </div>
 
-
-          <div href="https://sfedu.ru/" className="knopka itemNews">
+          <div className="itemNews">
+          <a href="/exhibit/exhibitslist/?limit=10&offset=0&categories=tech" className="knopka">
             <div className="vozm">
               <div className="vposf">
                 <div className="blok_title"> <p>Техника</p></div>
               </div>
               <div className="child bg-3"></div>
             </div>
+          </a>
           </div>
 
           <div className="itemNews">
-            <a href="https://sfedu.ru/" className="knopka">
+            <a href="/exhibit/exhibitslist/?limit=10&offset=0&categories=typography" className="knopka">
               <div className="vozm">
                 <div className="vposf">
                   <div className="blok_title"> <p>Типография</p></div>
@@ -62,7 +63,7 @@ function Catalog() {
           </div>
 
           <div className="itemNews">
-            <a href="http://localhost:3000/news" className="knopka">
+            <a href="/exhibit/exhibitslist/?limit=10&offset=0&categories=computers" className="knopka">
               <div className="vozm">
                 <div className="vposf">
                   <div className="blok_title"><p>Компьютеры</p></div>
@@ -73,7 +74,7 @@ function Catalog() {
           </div>
 
           <div className="itemNews">
-            <a href="http://localhost:3000/news" className="knopka">
+            <a href="/exhibit/exhibitslist/?limit=10&offset=0&categories=handlewrite" className="knopka">
               <div className="vozm">
                 <div className="vposf">
                   <div className="blok_title"><p>Печатные машинки</p></div>
@@ -85,7 +86,7 @@ function Catalog() {
 
 
           <div className="itemNews">
-            <a href="http://localhost:3000/news" className="knopka">
+            <a href="/exhibit/exhibitslist/?limit=10&offset=0&categories=tv" className="knopka">
               <div className="vozm">
                 <div className="vposf">
                   <div className="blok_title"> <p>Телевизоры</p></div>
@@ -96,7 +97,7 @@ function Catalog() {
           </div>
 
           <div className="itemNews">
-            <a href="http://localhost:3000/news" className="knopka">
+            <a href="/exhibit/exhibitslist/?limit=10&offset=0&categories=guns" className="knopka">
               <div className="vozm">
                 <div className="vposf">
                   <div className="blok_title">
@@ -111,7 +112,7 @@ function Catalog() {
 
 
           <div className="itemNews">
-            <a href="http://localhost:3000/news" className="knopka">
+            <a href="/exhibit/exhibitslist/?limit=10&offset=0&categories=phvtech" className="knopka">
               <div className="vozm">
                 <div className="vposf">
                   <div className="blok_title">
@@ -126,7 +127,7 @@ function Catalog() {
 
 
           <div className="itemNews">
-            <a href="http://localhost:3000/news" className="knopka">
+            <a href="/exhibit/exhibitslist/?limit=10&offset=0&categories=other" className="knopka">
               <div className="vozm">
                 <div className="vposf">
                   <div className="blok_title">

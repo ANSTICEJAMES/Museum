@@ -1,69 +1,68 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './ExhibitsList.css'
+import queryString from 'query-string';
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import axios from 'axios'
 import Element from '../Catalog/Element'
+import { Link } from "react-router-dom"
 
-export  class ExhibitsList extends Component {
+
+export class ExhibitsList extends Component {
 
     constructor(props) {
         super(props);
+
+
         this.state = {
-            exhibits: []
+            exhibits: [],
+            query: props.location.search
         }
+
     }
-    
-
-
 
     componentDidMount() {
-        this.getExhibits ();
-        //this.getExhibits (this.props.uid);
-        
-    } 
-
-
-    async getExhibits(uid) {
-        //const exhibits = await axios.get(`${process.env.REACT_APP_API_URL}exhibits/${uid}`);
-        const exhibits = await axios.get(`${process.env.REACT_APP_API_URL}/exhibits/?limit=6&offset=0&categories=5`);
-        //const {name, description, categories, image} = exhibit.data.responseData;
-        console.log('111111111111111',exhibits);
-
-        this.setState({exhibits:exhibits.data.responseData}, ()=> console.log(this.state));
-   
+        const {offset, categories} = queryString.parse(this.state.query)
+        this.getExhibits(offset, categories);
     }
 
-    handleClick (e) {
-        console.log("###################",e);
+    async getExhibits(offset, categories) {
+        const exhibits = await axios.get(`${process.env.REACT_APP_API_URL}/exhibits/?limit=6&offset=${offset}&categories=${categories}`);
+        this.setState({exhibits: exhibits.data.responseData});
+    }
+
+
+    handleClick(uid) {
+
     }
 
 
     render() {
+        const exhibits = this.state.exhibits
 
         return (
             <div className='Category'>
-              <Header/>
-              <div className="contentList">
-        <div className="nameCategory"><h3>categories</h3></div>
-                <ul className="grid-container"> 
-                { 
-                        this.state.exhibits.map(exhibit=>
+                <Header/>
+                <div className="contentList">
+                    <div className="nameCategory"><h3>categories</h3></div>
+                    <ul className="grid-container">
                         {
-                            return (
-                                
-                                <Element key={exhibit.uid} exhibit={exhibit} />
-                            ) 
+                            exhibits ? exhibits.map(exhibit => {
+                                return (
+                                        <Link to={`/exhibit/${exhibit.uid}`} key={exhibit.uid}>
+                                            <Element exhibit={exhibit} />
+                                        </Link>
+                                )
+                            }) : (<li>Нет экспонатов</li>)
                         }
-                    )
-                }
-                </ul>
-              </div>
-              <Footer/>
+                    </ul>
+                </div>
+                <Footer/>
             </div>
         )
-    
+
     }
 
 }
+
 export default ExhibitsList;
