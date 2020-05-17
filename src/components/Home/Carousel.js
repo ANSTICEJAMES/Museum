@@ -11,6 +11,7 @@ function Carousel() {
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
   <div className="carousel-inner">
+
     <div className="carousel-item active">
       <img src={image0} className="d-block w-100" alt="1 фото карусели"/>
       <div className="carousel-caption d-none d-md-block">
@@ -18,6 +19,7 @@ function Carousel() {
         <h2> <kbd> Южного Федерального Университета</kbd></h2>
       </div>
     </div>
+
     <div className="carousel-item">
       <img src={image1} className="d-block w-100" alt="2 фото карусели"/>
       <div className="carousel-caption d-none d-md-block ">
@@ -25,6 +27,7 @@ function Carousel() {
         <h4><kbd> 10 различных выставок</kbd></h4>
       </div>
     </div>
+
     <div className="carousel-item">
       <img src={image2} className="d-block w-100"  alt="3 фото карусели"/>
       <div className="carousel-caption d-none d-md-block">
@@ -32,6 +35,7 @@ function Carousel() {
         <h4><kbd>Вы можете узнать об актуальных событиях во вкладке "Новости"</kbd></h4>
       </div>
     </div>
+
   </div>
   <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
