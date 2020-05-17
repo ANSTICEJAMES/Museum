@@ -7,6 +7,7 @@ import axios from 'axios'
 import Element from '../Catalog/Element'
 import {Link} from "react-router-dom"
 import Loader from "../Other/Loader"
+import words from "../../words"
 
 export class ExhibitsList extends Component {
 
@@ -31,13 +32,14 @@ export class ExhibitsList extends Component {
 
     async getExhibits(offset, categories) {
         const exhibits = await axios.get(`${process.env.REACT_APP_API_URL}/exhibits/?limit=6&offset=${offset}&categories=${categories}`);
-        this.setState({exhibits: exhibits.data.responseData, isLoading: true})
+        this.setState({exhibits: exhibits.data.responseData, isLoading: true, query:{offset, categories}})
     };
 
 
 
     render() {
-        const {exhibits, isLoading} = this.state;
+
+        const {exhibits, isLoading, query} = this.state;
 
         return (
 
@@ -46,7 +48,7 @@ export class ExhibitsList extends Component {
                   <Header/>
                   {isLoading ?
                   <div className="contentList">
-                      <div className="nameCategory"><h3>categories</h3></div>
+                      <div className="nameCategory"><h3>{words[query.categories]}</h3></div>
                       <ul className="grid-container">
                           {
                               exhibits ? exhibits.map(exhibit => {
