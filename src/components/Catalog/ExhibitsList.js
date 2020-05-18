@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
+import {Link} from "react-router-dom"
+import axios from 'axios'
+import InfiniteScroll from 'react-infinite-scroller';
 import './ExhibitsList.css'
 import queryString from 'query-string';
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
-import axios from 'axios'
 import Element from '../Catalog/Element'
-import {Link} from "react-router-dom"
 import Loader from "../Other/Loader"
 import words from "../../words"
 
@@ -23,17 +24,18 @@ export class ExhibitsList extends Component {
 
     }
 
-    componentDidMount() {
+     componentDidMount() {
         const {offset, categories} = queryString.parse(this.state.query)
-        this.getExhibits(offset, categories)
-
+        this.getExhibits(offset, categories,
+            (exhibits)=>this.setState({exhibits: exhibits.data.responseData, isLoading: true, query:{offset, categories}}) )
 
     }
 
-    async getExhibits(offset, categories) {
-        const exhibits = await axios.get(`${process.env.REACT_APP_API_URL}/exhibits/?limit=6&offset=${offset}&categories=${categories}`);
-        this.setState({exhibits: exhibits.data.responseData, isLoading: true, query:{offset, categories}})
+    async getExhibits(offset, categories, cb) {
+        const exhibits = await axios.get(`${process.env.REACT_APP_API_URL}/exhibits/?limit=8&offset=${offset}&categories=${categories}`);
+        cb(exhibits)
     };
+
 
 
 
@@ -50,15 +52,20 @@ export class ExhibitsList extends Component {
                   <div className="contentList">
                       <div className="nameCategory"><h3>{words[query.categories]}</h3></div>
                       <ul className="grid-container">
-                          {
-                              exhibits ? exhibits.map(exhibit => {
-                                  return (
-                                      <Link to={`/exhibit/${exhibit.uid}`} key={exhibit.uid}>
-                                          <Element exhibit={exhibit}/>
-                                      </Link>
-                                  )
-                              }) : (<li>Нет экспонатов</li>)
-                          }
+
+                              {
+                                  exhibits ? exhibits.map(exhibit => {
+                                      return (
+                                          <Link to={`/exhibit/${exhibit.uid}`} key={exhibit.uid}>
+                                              <Element exhibit={exhibit}/>
+                                          </Link>
+                                      )
+                                  }) : (<li>Нет экспонатов</li>)
+                              }
+
+
+
+
                       </ul>
                   </div>
                   : <Loader/>}

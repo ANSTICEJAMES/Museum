@@ -15,7 +15,7 @@ function Catalog() {
         <div className="gridnews blok">
 
           <div className="itemNews">
-            <a href="/exhibit/exhibitslist/?limit=10&offset=0&categories=awards" className="knopka">
+            <a href="/exhibit/exhibitslist/?limit=8&offset=0&categories=awards" className="knopka">
               <div className="vozm">
                 <div className="vposf">
                   <div className="blok_title">
@@ -28,7 +28,7 @@ function Catalog() {
           </div>
 
           <div className="itemNews">
-            <a href="/exhibit/exhibitslist/?limit=10&offset=0&categories=photo" className="knopka">
+            <a href="/exhibit/exhibitslist/?limit=6&offset=0&categories=photo" className="knopka">
               <div className="vozm">
                 <div className="vposf">
                   <div className="blok_title">
@@ -41,7 +41,7 @@ function Catalog() {
           </div>
 
           <div className="itemNews">
-          <a href="/exhibit/exhibitslist/?limit=10&offset=0&categories=tech" className="knopka">
+          <a href="/exhibit/exhibitslist/?limit=6&offset=0&categories=tech" className="knopka">
             <div className="vozm">
               <div className="vposf">
                 <div className="blok_title"> <p>Техника</p></div>
@@ -52,7 +52,7 @@ function Catalog() {
           </div>
 
           <div className="itemNews">
-            <a href="/exhibit/exhibitslist/?limit=10&offset=0&categories=typography" className="knopka">
+            <a href="/exhibit/exhibitslist/?limit=6&offset=0&categories=typography" className="knopka">
               <div className="vozm">
                 <div className="vposf">
                   <div className="blok_title"> <p>Типография</p></div>
@@ -63,7 +63,7 @@ function Catalog() {
           </div>
 
           <div className="itemNews">
-            <a href="/exhibit/exhibitslist/?limit=10&offset=0&categories=computers" className="knopka">
+            <a href="/exhibit/exhibitslist/?limit=6&offset=0&categories=computers" className="knopka">
               <div className="vozm">
                 <div className="vposf">
                   <div className="blok_title"><p>Компьютеры</p></div>
@@ -74,7 +74,7 @@ function Catalog() {
           </div>
 
           <div className="itemNews">
-            <a href="/exhibit/exhibitslist/?limit=10&offset=0&categories=handlewrite" className="knopka">
+            <a href="/exhibit/exhibitslist/?limit=6&offset=0&categories=handlewrite" className="knopka">
               <div className="vozm">
                 <div className="vposf">
                   <div className="blok_title"><p>Печатные машинки</p></div>
@@ -86,7 +86,7 @@ function Catalog() {
 
 
           <div className="itemNews">
-            <a href="/exhibit/exhibitslist/?limit=10&offset=0&categories=tv" className="knopka">
+            <a href="/exhibit/exhibitslist/?limit=6&offset=0&categories=tv" className="knopka">
               <div className="vozm">
                 <div className="vposf">
                   <div className="blok_title"> <p>Телевизоры</p></div>
@@ -97,7 +97,7 @@ function Catalog() {
           </div>
 
           <div className="itemNews">
-            <a href="/exhibit/exhibitslist/?limit=10&offset=0&categories=guns" className="knopka">
+            <a href="/exhibit/exhibitslist/?limit=6&offset=0&categories=guns" className="knopka">
               <div className="vozm">
                 <div className="vposf">
                   <div className="blok_title">
@@ -112,7 +112,7 @@ function Catalog() {
 
 
           <div className="itemNews">
-            <a href="/exhibit/exhibitslist/?limit=10&offset=0&categories=phvtech" className="knopka">
+            <a href="/exhibit/exhibitslist/?limit=6&offset=0&categories=phvtech" className="knopka">
               <div className="vozm">
                 <div className="vposf">
                   <div className="blok_title">
@@ -127,7 +127,7 @@ function Catalog() {
 
 
           <div className="itemNews">
-            <a href="/exhibit/exhibitslist/?limit=10&offset=0&categories=other" className="knopka">
+            <a href="/exhibit/exhibitslist/?limit=6&offset=0&categories=other" className="knopka">
               <div className="vozm">
                 <div className="vposf">
                   <div className="blok_title">
