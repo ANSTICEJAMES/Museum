@@ -6,6 +6,8 @@ import { Link } from "react-router-dom"
 import axios from 'axios'
 import  '../Catalog/ExhibitsList'
 import  './Exhibit.css'
+import notphoto from './notphoto.png'
+import Loader from "../Other/Loader"
 
 
 class Exhibit extends Component {
@@ -15,7 +17,8 @@ class Exhibit extends Component {
     super(props);
     this.state = {
         exhibit:{},
-        params: props.match.params
+        params: props.match.params,
+        isLoading : false
 
 
     }
@@ -25,16 +28,17 @@ class Exhibit extends Component {
 
   componentDidMount() {
       const {uid} = this.state.params;
-      this.getExhibit (uid);
+      this.getExhibit (uid, (exhibit)=>{ this.setState({exhibit : exhibit.data.responseData,isLoading:true});});
+
 
   } 
 
 
 
- async getExhibit(uid) {
+ async getExhibit(uid, cb) {
+
     const exhibit = await axios.get(`${process.env.REACT_APP_API_URL}/exhibits/${uid}`);
-    const {name, description, categories, image} = exhibit.data.responseData;
-   this.setState({exhibit : exhibit.data.responseData });
+    cb (exhibit);
   }
 
 
@@ -42,11 +46,13 @@ class Exhibit extends Component {
 
  render () {
      const {name, description, categories, image} = this.state.exhibit;
-     console.log(image)
+     const {isLoading} = this.state;
+     console.log(image, isLoading)
 
      return (
     <div className='Exhibit'>
       <Header/>
+      {isLoading ?
       <div className="contentExhibit">
         <div className="nameplate">
           <div className="card-news-body">
@@ -62,13 +68,56 @@ class Exhibit extends Component {
             </h6>
           <p>{description}</p></div>
           <div className="photo">
-              <img src={`${process.env.REACT_APP_API_URL}/${image}`} alt="exhibits" width="500" height="350" />
+          
+            <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval="3500">
+              <div className="carousel-inner">
+                {
+                  image ? image.map ((img, i) => {
+                                      return (
+                                        <div className="carousel-item" key={i}>
+                                        <img src={img} className="d-block w-100"/> 
+                                        </div>
+                                      )
+                                    }
+
+                                  ) : ( <div className="carousel-item">
+                                          <img src={notphoto} className="d-block w-100"/> 
+                                        </div>)
+                } 
+
+              </div>
+              <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span className="sr-only">Previous</span>
+              </a>
+              <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                <span className="sr-only">Next</span>
+              </a>
+            </div>
+
+
+
+
+
+
+
+
+
+
+                      
+
+
+
+
+          {/* <img src={`${process.env.REACT_APP_API_URL}/${image}`} alt="exhibits" width="500" height="350" /> */}
           </div>
         </div>
         <div className="back">
-            <Link to ="/catalog" className="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Вернуться назад</Link>
+            <Link to ={`/exhibit/exhibitslist/?limit=10&offset=0&categories=${categories}`} className="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Вернуться назад</Link>
         </div>
       </div>
+       : <Loader/>}
       <Footer/>
     </div>
   )

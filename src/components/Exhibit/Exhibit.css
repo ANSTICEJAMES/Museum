@@ -64,7 +64,8 @@ hr{
 
 .photo {
 	float: right;
-	width: 50%;
+	height: 350px;
+	width: 450px;
 	padding-top: 20px;
 	padding-left: 5%;
 	padding-right: 5%;
@@ -73,4 +74,17 @@ hr{
 .back {
 	padding-top: 20px;
 	padding-left: 15%;
+}
+
+#carouselExampleIndicators {
+	height: inherit; /* Высота блока */
+	width: inherit;
+	max-width: 100%;
+	overflow: hidden;
+	margin: auto;
+  }
+
+.carousel img {
+	height: inherit;
+	width: inherit;
 }
