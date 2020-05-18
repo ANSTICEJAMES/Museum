@@ -45,7 +45,6 @@ class Exhibit extends Component {
     render() {
         const {name, description, categories, image} = this.state.exhibit;
         const {isLoading} = this.state;
-        console.log("kek")
 
         return (
             <div className='Exhibit'>
@@ -76,12 +75,12 @@ class Exhibit extends Component {
                                             image ? image.map((img, i) => {
                                                     return (
                                                         <div className="carousel-item" key={i}>
-                                                            <img src={`${process.env.REACT_APP_API_URL}/${img}`} className="d-block w-100"/>
+                                                            <img src={`${process.env.REACT_APP_API_URL}/${img}`} alt="exhibit" className="d-block w-100"/>
                                                         </div>
                                                     )
                                                 }
                                             ) : (<div className="carousel-item">
-                                                <img src={notphoto} className="d-block w-100"/>
+                                                <img src={notphoto} alt="exhibit" className="d-block w-100"/>
                                             </div>)
                                         }
 
