@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import logo from './exhibit.png'
@@ -8,6 +8,9 @@ import '../Catalog/ExhibitsList'
 import './Exhibit.css'
 import notphoto from './notphoto.png'
 import Loader from "../Other/Loader"
+
+import sss from './sonata.jpg'
+import www from '../../images/home/0.jpg'
 
 
 class Exhibit extends Component {
@@ -41,6 +44,42 @@ class Exhibit extends Component {
         cb(exhibit);
     }
 
+    Carousel() {
+        return (
+          <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval="3500">
+        <ol className="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div className="carousel-inner">
+      
+          <div className="carousel-item active">
+          <img class="d-block w-100 " src={sss} alt="Первый слайд"/>
+           
+          </div>
+      
+          <div className="carousel-item">
+          <img class="d-block w-100 " src={notphoto} alt="Второй слайд"/>
+          </div>
+      
+          <div className="carousel-item">
+          <img class="d-block w-100 " src={www} alt="Второй слайд"/>
+          </div>
+      
+        </div>
+        <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="sr-only">Previous</span>
+        </a>
+        <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="sr-only">Next</span>
+        </a>
+      </div>
+        );
+      }
+
 
     render() {
         const {name, description, categories, image} = this.state.exhibit;
@@ -73,11 +112,19 @@ class Exhibit extends Component {
                                     <div className="carousel-inner">
                                         {
                                             image ? image.map((img, i) => {
-                                                    return (
-                                                        <div className="carousel-item" key={i}>
-                                                            <img src={`${process.env.REACT_APP_API_URL}/${img}`} alt="exhibit" className="d-block w-100"/>
-                                                        </div>
-                                                    )
+                                                   
+                                                        
+                                                            if (i==0)  return (
+                                                            <div className="carousel-item active" key={i}>
+                                                                <img src={`${process.env.REACT_APP_API_URL}/${img}`} alt="exhibit" className="d-block w-100"/>
+                                                            </div>
+                                                            )
+                                                            else return (
+                                                                <div className="carousel-item" key={i}>
+                                                                    <img src={`${process.env.REACT_APP_API_URL}/${img}`} alt="exhibit" className="d-block w-100"/>
+                                                                </div>
+                                                            )     
+                                                    
                                                 }
                                             ) : (<div className="carousel-item">
                                                 <img src={notphoto} alt="exhibit" className="d-block w-100"/>
@@ -98,7 +145,38 @@ class Exhibit extends Component {
                                 </div>
 
 
-                                {/* <img src={`${process.env.REACT_APP_API_URL}/${image}`} alt="exhibits" width="500" height="350" /> */}
+
+                                {/* <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                <ol className="carousel-indicators">
+                                    <li data-target="#carouselExampleControls" data-slide-to="0" className="active"></li>
+                                    <li data-target="#carouselExampleControls" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleControls" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                    <img class="d-block w-100 " src={www} alt="Первый слайд"/>
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img class="d-block w-100 " src={notphoto} alt="Второй слайд"/>
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img class="d-block w-100 " src={sss} alt="Второй слайд"/>
+                                    </div>
+                                    
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                                </div> */}
+
+
+
+
                             </div>
                         </div>
                         <div className="back">

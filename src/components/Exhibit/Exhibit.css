@@ -64,10 +64,11 @@ hr{
 
 .photo {
 	float: right;
-	height: 350px;
-	width: 450px;
+	height: 350px; /* Высота блока */
+	width: 50%;
+	overflow: hidden;
+	margin: auto;
 	padding-top: 20px;
-	padding-left: 5%;
 	padding-right: 5%;
 }
 
@@ -77,14 +78,25 @@ hr{
 }
 
 #carouselExampleIndicators {
-	height: inherit; /* Высота блока */
-	width: inherit;
+	height: 350px; /* Высота блока */
+	width: 100%;
 	max-width: 100%;
 	overflow: hidden;
 	margin: auto;
   }
 
-.carousel img {
-	height: inherit;
-	width: inherit;
-}
+  .carousel-inner {
+	height: 350px; /* Высота блока */
+	width: 100%;
+	max-width: 100%;
+	overflow: hidden;
+	margin: auto; 
+  }
+
+  .carousel-item img {
+	height: 350px; /* Высота блока */
+	width: 100%;
+	max-width: 100%;
+	overflow: hidden;
+	margin: auto; 
+  }
