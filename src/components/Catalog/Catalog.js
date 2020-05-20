@@ -10,7 +10,7 @@ function Catalog() {
   return (
     <div>
       <Header />
-      <div className="contentCat">
+      <div className="contentCat col-lg-20">
         <div className="page_title"> <h1>Каталог экспонатов</h1></div>
         <div className="gridnews blok">
 
