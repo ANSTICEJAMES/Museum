@@ -7,21 +7,24 @@ import Carousel from './Carousel';
 import Text from './Text';
 
 
-
-function Home () {
+function Home() {
     return (
-      <div className='Home'>
-        <Header/>
-        <div className="content">
-          <div className="carousel">
-            <Carousel/>
-          </div>
-          <div className="text">
-            <Text/>
-          </div>
-        </div>
-        <Footer/>
-      </div>
+        <>
+            <Header/>
+
+            <div className='Home'>
+                <div className="content">
+                    <div className="carousel">
+                        <Carousel/>
+                    </div>
+                    <div className="text">
+                        <Text/>
+                    </div>
+                </div>
+            </div>
+            <Footer/>
+
+        </>
     )
 }
 

@@ -1,5 +1,4 @@
 .content {
-  padding-top: 105px;
   padding-bottom: 50px; /*нижний внутренний отступ*/
   background: rgb(236, 245, 255);
 }
@@ -9,4 +8,7 @@
   max-width: 100%;
   overflow: hidden;
   margin: auto;
+}
+.Home{
+  z-index: 1;
 }

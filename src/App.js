@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Route, Switch, withRouter} from "react-router-dom"
+import {Link, Route, Switch, withRouter} from "react-router-dom"
 import './App.css';
 import Home from './components/Home/Home'
 import News from './components/News/News'
@@ -19,7 +19,7 @@ class App extends Component {
           <Route history={history} path='/catalog' component={Catalog} />
           <Route history={history} strict path='/exhibit' component={ExhibitRoute} />
 
-          <Route history={history} path='*' children={()=><h2>Not found</h2>} />
+          <Route history={history} path='*' children={()=><h2>Not found <Link to="/">Домой</Link></h2>  } />
         </Switch>
       </div>
     );

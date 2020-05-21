@@ -1,21 +1,26 @@
 
 .head {
   background-color: #f7f7f7; /* Цвет фона */
-  height: 105px;
+  max-height: 105px;
   color: #002b58;
-  position: fixed; /* Фиксированное положение */
   width: 100%; /* Ширина слоя */
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   z-index: 9999;
+    position: relative;
+    opacity: 0.99;
    box-shadow: 0 0 20px rgba(0,0,0,1);
+}
+
+.logo{
+    max-height: 80px;
 }
 
 .info {
     align-items: center;
     text-align: center;
-    width: 800px; /* Ширина элемента в пикселах */
+    max-width: 800px; /* Ширина элемента в пикселах */
 }
 
 .nav {
@@ -30,4 +35,13 @@
 
  .name {
   text-align: center;
+}
+
+@media (max-width: 670px) {
+    .title{
+        font-size: 1.4rem;
+    }
+    .logo{
+        width: 80px;
+    }
 }

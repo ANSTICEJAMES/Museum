@@ -15,7 +15,8 @@ function Carousel() {
     <div className="carousel-item active">
       <img src={image0} className="d-block w-100" alt="1 фото карусели"/>
       <div className="carousel-caption d-none d-md-block">
-        <h2> <kbd>Добро пожаловать на официальный сайт политехнического музея </kbd></h2>
+        <h2> <kbd>Добро пожаловать на официальный сайт </kbd></h2>
+          <h2> <kbd> политехнического музея </kbd></h2>
         <h2> <kbd> Южного Федерального Университета</kbd></h2>
       </div>
     </div>

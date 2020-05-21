@@ -1,6 +1,6 @@
 .footer {
-   font-family: Verdana, Arial, Helvetica, sans-serif;
-
+  margin-top: auto;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   left: 0; bottom: 0; /* Левый нижний угол */
   padding: 10px; /* Поля вокруг текста */
   background: #002b58; /* Цвет фона */

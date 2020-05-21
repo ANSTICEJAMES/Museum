@@ -1,9 +1,8 @@
-.Catalog_stile {
-    height: 1500px;
-} 
+/*.Catalog_stile {*/
+/*    height: 1500px;*/
+/*} */
 
 .contentCat {
-    padding-top: 105px;
     padding-bottom: 50px; /*нижний внутренний отступ*/
     background: rgb(236, 245, 255);
     height: 1500px;
@@ -13,7 +12,6 @@
 h1 { 
     text-align: center;
     color: #002b58;
-    margin-top: 30px;
 }
 
 .page-title {

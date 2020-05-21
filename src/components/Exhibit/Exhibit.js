@@ -44,41 +44,41 @@ class Exhibit extends Component {
         cb(exhibit);
     }
 
-    Carousel() {
-        return (
-          <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval="3500">
-        <ol className="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div className="carousel-inner">
-      
-          <div className="carousel-item active">
-          <img class="d-block w-100 " src={sss} alt="Первый слайд"/>
-           
-          </div>
-      
-          <div className="carousel-item">
-          <img class="d-block w-100 " src={notphoto} alt="Второй слайд"/>
-          </div>
-      
-          <div className="carousel-item">
-          <img class="d-block w-100 " src={www} alt="Второй слайд"/>
-          </div>
-      
-        </div>
-        <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="sr-only">Previous</span>
-        </a>
-        <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="sr-only">Next</span>
-        </a>
-      </div>
-        );
-      }
+    // Carousel() {
+    //     return (
+    //       <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval="3500">
+    //     <ol className="carousel-indicators">
+    //       <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+    //       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    //       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    //     </ol>
+    //     <div className="carousel-inner">
+    //
+    //       <div className="carousel-item active">
+    //       <img class="d-block w-100 " src={sss} alt="Первый слайд"/>
+    //
+    //       </div>
+    //
+    //       <div className="carousel-item">
+    //       <img class="d-block w-100 " src={notphoto} alt="Второй слайд"/>
+    //       </div>
+    //
+    //       <div className="carousel-item">
+    //       <img class="d-block w-100 " src={www} alt="Второй слайд"/>
+    //       </div>
+    //
+    //     </div>
+    //     <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    //       <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    //       <span className="sr-only">Previous</span>
+    //     </a>
+    //     <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    //       <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    //       <span className="sr-only">Next</span>
+    //     </a>
+    //   </div>
+    //     );
+    //   }
 
 
     render() {
@@ -86,108 +86,89 @@ class Exhibit extends Component {
         const {isLoading} = this.state;
 
         return (
-            <div className='Exhibit'>
+            <>
                 <Header/>
-                {isLoading ?
-                    <div className="contentExhibit">
-                        <div className="nameplate">
-                            <div className="card-news-body">
-                                <img src={logo} alt="exhibits" className="news-img"/>
-                                <h5 className="news-text">ЭКСПОНАТ</h5>
-                            </div>
-                            <hr></hr>
-                        </div>
-                        <div className="namex">
-                            <div className="namexx"><h4>{name}</h4></div>
-                        </div>
-                        <div className="common">
-                            <div className="about"><h6>
-                                Описание экспоната
-                            </h6>
-                                <p>{description}</p></div>
-                            <div className="photo">
+                <div className='Exhibit'>
 
-                                <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel"
-                                     data-interval="3500">
-                                    <div className="carousel-inner">
-                                        {
-                                            image ? image.map((img, i) => {
-                                                   
-                                                        
-                                                            if (i==0)  return (
-                                                            <div className="carousel-item active" key={i}>
-                                                                <img src={`${process.env.REACT_APP_API_URL}/${img}`} alt="exhibit" className="d-block w-100"/>
-                                                            </div>
-                                                            )
-                                                            else return (
-                                                                <div className="carousel-item" key={i}>
-                                                                    <img src={`${process.env.REACT_APP_API_URL}/${img}`} alt="exhibit" className="d-block w-100"/>
-                                                                </div>
-                                                            )     
-                                                    
-                                                }
-                                            ) : (<div className="carousel-item">
-                                                <img src={notphoto} alt="exhibit" className="d-block w-100"/>
-                                            </div>)
-                                        }
+                    {isLoading ?
 
+                        <div className="contentExhibit">
+
+                            <div className="left">
+                                <div className="nameplate">
+                                    <img src={logo} alt="exhibits" className="news-img"/>
+                                    <h5 className="news-text">ЭКСПОНАТ</h5>
+                                </div>
+                                <div className="namex">
+                                    <div className="namexx"><h4>{name}</h4></div>
+                                </div>
+                                <div className="common">
+                                    <div className="about"><h6>
+                                        Описание экспоната
+                                    </h6>
+                                        {description}
                                     </div>
-                                    <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button"
-                                       data-slide="prev">
-                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span className="sr-only">Previous</span>
-                                    </a>
-                                    <a className="carousel-control-next" href="#carouselExampleIndicators" role="button"
-                                       data-slide="next">
-                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span className="sr-only">Next</span>
-                                    </a>
+
                                 </div>
 
-
-
-                                {/* <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                                <ol className="carousel-indicators">
-                                    <li data-target="#carouselExampleControls" data-slide-to="0" className="active"></li>
-                                    <li data-target="#carouselExampleControls" data-slide-to="1"></li>
-                                    <li data-target="#carouselExampleControls" data-slide-to="2"></li>
-                                </ol>
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                    <img class="d-block w-100 " src={www} alt="Первый слайд"/>
-                                    </div>
-                                    <div class="carousel-item">
-                                    <img class="d-block w-100 " src={notphoto} alt="Второй слайд"/>
-                                    </div>
-                                    <div class="carousel-item">
-                                    <img class="d-block w-100 " src={sss} alt="Второй слайд"/>
-                                    </div>
-                                    
-                                </div>
-                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                                </div> */}
-
-
-
-
                             </div>
+                            <div className="right">
+                                <div className="photo">
+
+                                    <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel"
+                                        // data-interval="3500"
+                                    >
+                                        <ul className="carousel-inner">
+                                            {
+                                                image ? image.map((img, i) => {
+                                                        if (!i) return (
+                                                            <li className="carousel-item active" key={i}>
+                                                                <img src={`${process.env.REACT_APP_API_URL}/${img}`}
+                                                                     alt="exhibit" className="d-block w-100"/>
+                                                            </li>
+                                                        )
+                                                        else return (
+                                                            <li className="carousel-item" key={i}>
+                                                                <img src={`${process.env.REACT_APP_API_URL}/${img}`}
+                                                                     alt="exhibit" className="d-block w-100"/>
+                                                            </li>
+                                                        )
+                                                    }
+                                                ) : (<div className="carousel-item">
+                                                    <img src={notphoto} alt="exhibit" className="d-block w-100"/>
+                                                </div>)
+                                            }
+
+                                        </ul>
+                                        <a className="carousel-control-prev" href="#carouselExampleIndicators"
+                                           role="button"
+                                           data-slide="prev">
+                                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span className="sr-only">Previous</span>
+                                        </a>
+                                        <a className="carousel-control-next" href="#carouselExampleIndicators"
+                                           role="button"
+                                           data-slide="next">
+                                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span className="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="back">
+                                    <Link to={`/exhibit/exhibitslist/?limit=10&offset=0&categories=${categories}`}
+                                          className="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Вернуться
+                                        назад</Link>
+                                </div>
+                            </div>
+
                         </div>
-                        <div className="back">
-                            <Link to={`/exhibit/exhibitslist/?limit=10&offset=0&categories=${categories}`}
-                                  className="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Вернуться
-                                назад</Link>
-                        </div>
-                    </div>
-                    : <Loader/>}
+
+                        : <Loader/>}
+                </div>
                 <Footer/>
-            </div>
+
+            </>
         )
     }
 }
