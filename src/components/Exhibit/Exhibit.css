@@ -41,7 +41,6 @@
 
 @media (max-width: 670px) {
 
-	.name{}
 	.contentExhibit{
 		display: flex;
 		flex-direction: column;

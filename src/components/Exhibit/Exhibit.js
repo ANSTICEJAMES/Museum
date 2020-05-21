@@ -106,7 +106,8 @@ class Exhibit extends Component {
                                     <div className="about"><h6>
                                         Описание экспоната
                                     </h6>
-                                        {description}
+                                        {/* {description} */}
+                                       
                                     </div>
 
                                 </div>

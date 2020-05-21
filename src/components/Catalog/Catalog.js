@@ -8,7 +8,7 @@ import * as serviceWorker from '../../serviceWorker';
 
 function Catalog() {
   return (
-    <div>
+    <div className="q">
       <Header />
       <div className="contentCat">
         <div className="page_title"> <h1>Каталог экспонатов</h1></div>
