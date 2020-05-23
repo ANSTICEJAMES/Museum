@@ -40,7 +40,7 @@ class Exhibit extends Component {
 
     async getExhibit(uid, cb) {
 
-        const exhibit = await axios.get(`${process.env.REACT_APP_API_URL}/exhibits/${uid}`);
+        const exhibit = await axios.get(`${process.env.REACT_APP_API_URL}/v1/exhibits/${uid}`);
         cb(exhibit);
     }
 
@@ -124,13 +124,13 @@ class Exhibit extends Component {
                                                 image ? image.map((img, i) => {
                                                         if (!i) return (
                                                             <li className="carousel-item active" key={i}>
-                                                                <img src={`${process.env.REACT_APP_API_URL}/${img}`}
+                                                                <img src={`${process.env.REACT_APP_API_URL}${img}`}
                                                                      alt="exhibit" className="d-block w-100"/>
                                                             </li>
                                                         )
                                                         else return (
                                                             <li className="carousel-item" key={i}>
-                                                                <img src={`${process.env.REACT_APP_API_URL}/${img}`}
+                                                                <img src={`${process.env.REACT_APP_API_URL}${img}`}
                                                                      alt="exhibit" className="d-block w-100"/>
                                                             </li>
                                                         )

@@ -32,7 +32,7 @@ export class ExhibitsList extends Component {
     }
 
     async getExhibits(offset, categories, cb) {
-        const exhibits = await axios.get(`${process.env.REACT_APP_API_URL}/exhibits/?limit=8&offset=${offset}&categories=${categories}`);
+        const exhibits = await axios.get(`${process.env.REACT_APP_API_URL}/v1/exhibits/?limit=8&offset=${offset}&categories=${categories}`);
         cb(exhibits)
     };
 
