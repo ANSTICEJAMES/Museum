@@ -40,47 +40,9 @@ class Exhibit extends Component {
 
     async getExhibit(uid, cb) {
 
-        // const exhibit = await axios.get(`${process.env.REACT_APP_API_URL}/v1/exhibits/${uid}`);
-        const exhibit = await axios.get(`http://91.203.192.84:3000/v1/exhibits/${uid}`);
+        const exhibit = await axios.get(`${process.env.REACT_APP_API_URL}/v1/exhibits/${uid}`);
         cb(exhibit);
     }
-
-    // Carousel() {
-    //     return (
-    //       <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval="3500">
-    //     <ol className="carousel-indicators">
-    //       <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-    //       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    //       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    //     </ol>
-    //     <div className="carousel-inner">
-    //
-    //       <div className="carousel-item active">
-    //       <img class="d-block w-100 " src={sss} alt="Первый слайд"/>
-    //
-    //       </div>
-    //
-    //       <div className="carousel-item">
-    //       <img class="d-block w-100 " src={notphoto} alt="Второй слайд"/>
-    //       </div>
-    //
-    //       <div className="carousel-item">
-    //       <img class="d-block w-100 " src={www} alt="Второй слайд"/>
-    //       </div>
-    //
-    //     </div>
-    //     <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    //       <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    //       <span className="sr-only">Previous</span>
-    //     </a>
-    //     <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    //       <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    //       <span className="sr-only">Next</span>
-    //     </a>
-    //   </div>
-    //     );
-    //   }
-
 
     render() {
         const {name, description, categories, image} = this.state.exhibit;
@@ -107,7 +69,7 @@ class Exhibit extends Component {
                                     <div className="about"><h6>
                                         Описание экспоната
                                     </h6>
-                                        {/* {description} */}
+                                         {description}
                                        
                                     </div>
 
@@ -125,9 +87,7 @@ class Exhibit extends Component {
                                                 image ? image.map((img, i) => {
                                                         if (!i) return (
                                                             <li className="carousel-item active" key={i}>
-                                                                {/*<img src={`${process.env.REACT_APP_API_URL}${img}`}*/}
-                                                                <img src={`http://91.203.192.84:3000${img}`}
-                                                                     alt="exhibit" className="d-block w-100"/>
+                                                                <img src={`${process.env.REACT_APP_API_URL}${img}`} alt="exhibit" className="d-block w-100"/>
                                                             </li>
                                                         )
                                                         else return (
