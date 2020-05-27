@@ -8,34 +8,32 @@ import Footer from '../Footer/Footer'
 import * as serviceWorker from '../../serviceWorker'
 
 
-
-
-
-
-
-function News () {
+function News() {
     return (
-      <div className='News'>
-        <Header/>
-            <div className="content">
+        <>        <Header/>
+            <div className='News'>
+                <div className="content">
 
-                <div className="carousel">
-                    <Carousel />
-                </div>
-                
-                <div className="card-news-body">
-                    <img src={ph3} className="news-img" alt="иконка новости"></img>
-                    <h5 className="news-text">НОВОСТИ</h5>
-                </div>
-                <hr></hr>
+                    <div className="carousel">
+                        <Carousel/>
+                    </div>
 
-                <div className="text">
-                    <Text />
+                    <div className="card-news-body">
+                        <img src={ph3} className="news-img" alt="иконка новости"></img>
+                        <h5 className="news-text">НОВОСТИ</h5>
+                    </div>
+                    <hr></hr>
+
+                    <div className="text">
+                        <Text/>
+                    </div>
+
                 </div>
-      
-        </div>
-        <Footer/>
-      </div>
+            </div>
+            <Footer/>
+
+        </>
+
     )
 }
 
