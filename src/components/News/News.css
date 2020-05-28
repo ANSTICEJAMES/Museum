@@ -1,12 +1,11 @@
 .card-news-body{
-	float: left;
 	border-radius: 6px;
 	max-width: 161px;
 	padding: 10px;
 	height: 45px;
 	background: #002b58;
 	margin-top: 80px;
-	margin-left: 10%;
+	margin-left: 19%;
 }
 .news-img{
 	float: left;
@@ -18,12 +17,4 @@
 	color: #ffffff;
 	float: left;
 	margin-left: 20px;
-}
-hr{
-	margin-left: 0px;
-	max-width: 20%;
-	border: none;
-	background-color: #002b58;
-	color: #002b58;
-	height: 1px;
 }
