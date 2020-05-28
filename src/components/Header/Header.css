@@ -12,11 +12,13 @@
 
 
 
-/*.header_align{*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: space-around;*/
-/*}*/
+
+
+.header_align{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 
 .logo{
     max-height: 80px;

@@ -10,7 +10,7 @@ function Header() {
     return (
         <div className="head">
             <div className="main_container">
-                <div className="template_align">
+                <div className="header_align">
                     <Link to="/">
                         <div className="logo" alt="Логотип"><img className="logo" src={logo} alt="Логотип"></img></div>
                     </Link>

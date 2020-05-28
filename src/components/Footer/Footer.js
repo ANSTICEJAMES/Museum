@@ -13,15 +13,13 @@ function Footer() {
             <div className="main_container">
                 <div className="template_align">
 
-                    <div className="contact">
                         <div className="adress">
                             <a href="https://goo.gl/maps/kGsTTQrmHwpS8H7a6" target="_blank"><img src={iconmap} className="icon"></img></a>
                             <p>Адрес: 237000, Россия, Ростовская обл., г. Таганрог, ул. Чехова, 22, корп."Б", 2-й подъезд</p>
                         </div>
                         <div className="proictis"> <a href="https://proictis.ru/" target="_blank"><img src={proictis} alt="proictis" className="proictis_img"></img></a></div>
-                        <div className="phone"> <img src={iconphone} className="icon"></img> <p>8(863)-437-14-61</p></div>
+                        <div className="phone"> <img src={iconphone} className="icon"></img> <span className="number">8(863)-437-14-61</span></div>
 
-                    </div>
                 </div>
             </div>
 
