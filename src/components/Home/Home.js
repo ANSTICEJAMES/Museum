@@ -18,19 +18,17 @@ function Home() {
                 </div>
                 <div className="main_container">
                     <div className='Home'>
-                        <div className="content">
 
                             <div className="text">
                                 <Text/>
                             </div>
-                        </div>
                     </div>
                 </div>
-
+                <Footer/>
             </div>
 
 
-            <Footer/>
+
 
         </>
     )

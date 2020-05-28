@@ -50,7 +50,8 @@ class Exhibit extends Component {
 
         return (
             <>
-                <div className='main_wrap'><Header/>
+                <div className='main_wrap'>
+                    <Header/>
                     <div className="main_container">
 
                         <div className='Exhibit'>
