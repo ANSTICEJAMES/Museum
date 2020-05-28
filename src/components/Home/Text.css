@@ -1,60 +1,49 @@
 .inner-content{
     color: #002b58;
-    margin-bottom: 20pxs;
+    margin-bottom: 20px;
     margin-left: 40px;
     position: static; /* Статичексое положение */
     z-index: 9999;
     text-align: justify
 }
 
-.blok-1{
-
-    height: 500px;
-    padding-top: 30px;
-    padding-left: 7%;
-    border-right: 60px;
+.block{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
-.content-1{
-    float: left;
+.content{
     width: 55%;
+    padding-bottom: 50px; /*нижний внутренний отступ*/
+    background: rgb(236, 245, 255);
 }
 
-.image-1{
-    float: left;
-    padding-left: 5%;
+.images{
+    width:427px;
+    height:284px;
 }
 
+@media (max-width: 650px) {
+    p {
+        font-size: 10px;
+    }
 
-.blok2{
-    height: 400px;
-    padding-left: 7%;
-    border-right: 60px;
-}
+    .images {
+        width: 214px;
+        height: 142px;
+        padding: 10px;
+    }
 
-.image-2{
-    float: left;
+    .block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-}
+    .content {
+        width: 400px;
+        padding-bottom: 20px;
 
-.content-2{
-    padding-left: 5%;
-    float: left;
-    width: 55%;
-}
-
-.blok3{
-    height: 400px;
-    padding-left: 7%;
-    border-right: 60px;
-}
-
-.content-3{
-    float: left;
-    width: 55%;
-}
-
-.image-3{
-    float: left;
-    padding-left: 5%;
+    }
 }
