@@ -1,7 +1,7 @@
 .inner-content{
     color: #002b58;
     margin-bottom: 20px;
-    margin-left: 40px;
+
     position: static; /* Статичексое положение */
     z-index: 9999;
     text-align: justify
@@ -17,12 +17,24 @@
     width: 55%;
     padding-bottom: 50px; /*нижний внутренний отступ*/
     background: rgb(236, 245, 255);
+    margin: 20px;
 }
 
 .images{
     width:427px;
     height:284px;
+    margin: 20px;
 }
+
+@media(max-width:764px){
+
+    .block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 
 @media (max-width: 650px) {
     p {
@@ -30,8 +42,8 @@
     }
 
     .images {
-        width: 214px;
-        height: 142px;
+        width: 270px;
+        height: 179px;
         padding: 10px;
     }
 
