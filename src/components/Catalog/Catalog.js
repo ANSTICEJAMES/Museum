@@ -9,127 +9,129 @@ import * as serviceWorker from '../../serviceWorker';
 function Catalog() {
   return (
     <div className="q">
-      <Header />
-      <div className="contentCat">
-        <div className="page_title"> <h1>Каталог экспонатов</h1></div>
-        <div className="gridnews blok">
-
+   
+    <Header/>
+    <div className="contentCat">
+    <main class="wrapper">
+  <section class="title">
+    <h1>Каталог экспонатов</h1>
+  </section>
+  <section class="breweries" id="breweries" >
+    <ul>
+      <li>
+        <figure> 
           <div className="itemNews">
-            <a href="/exhibit/exhibitslist/?limit=8&offset=0&categories=awards" className="knopka">
-              <div className="vozm">
-                <div className="vposf">
-                  <div className="blok_title">
-                    <p>Награды</p>
-                  </div>
-                </div>
-                <div className="child bg-1"></div>
-              </div>
-            </a>
-          </div>
-
-          <div className="itemNews">
-            <a href="/exhibit/exhibitslist/?limit=6&offset=0&categories=photo" className="knopka">
-              <div className="vozm">
-                <div className="vposf">
-                  <div className="blok_title">
-                    <p>Фото</p>
-                  </div>
-                </div>
-                <div className="child bg-2"></div>
-              </div>
-            </a>
-          </div>
-
-          <div className="itemNews">
-          <a href="/exhibit/exhibitslist/?limit=6&offset=0&categories=tech" className="knopka">
-            <div className="vozm">
-              <div className="vposf">
-                <div className="blok_title"> <p>Техника</p></div>
-              </div>
-              <div className="child bg-3"></div>
+              <a href="/exhibit/exhibitslist/?limit=8&offset=0&categories=awards" className="knopka">
+              <img src="/catalog/1.jpg" alt="Several hands holding beer glasses" className="scale"></img>
+              </a>
             </div>
-          </a>
-          </div>
-
+            <figcaption><h3>Награды</h3></figcaption>
+        </figure>
+      </li>
+      
+      <li>
+        <figure> 
           <div className="itemNews">
-            <a href="/exhibit/exhibitslist/?limit=6&offset=0&categories=typography" className="knopka">
-              <div className="vozm">
-                <div className="vposf">
-                  <div className="blok_title"> <p>Типография</p></div>
-                </div>
-                <div className="child bg-4"></div>
-              </div>
-            </a>
-          </div>
+              <a href="/exhibit/exhibitslist/?limit=8&offset=0&categories=awards" className="knopka">
+              <img src="/catalog/2.jpg" alt="Several hands holding beer glasses" className="scale"></img>
+              </a>
+            
+            </div>
+            <figcaption><h3>Фотографии</h3></figcaption>
+        </figure>
+      </li>
 
+      <li>
+        <figure> 
           <div className="itemNews">
-            <a href="/exhibit/exhibitslist/?limit=6&offset=0&categories=computers" className="knopka">
-              <div className="vozm">
-                <div className="vposf">
-                  <div className="blok_title"><p>Компьютеры</p></div>
-                </div>
-                <div className="child bg-5"></div>
-              </div>
-            </a>
-          </div>
+              <a href="/exhibit/exhibitslist/?limit=8&offset=0&categories=awards" className="knopka">
+              <img src="/catalog/3.jpg" alt="Several hands holding beer glasses" className="scale"></img>
+              </a>
+            
+            </div>
+            <figcaption><h3>Техника</h3></figcaption>
+        </figure>
+      </li>
 
+      <li>
+        <figure> 
           <div className="itemNews">
-            <a href="/exhibit/exhibitslist/?limit=6&offset=0&categories=handlewrite" className="knopka">
-              <div className="vozm">
-                <div className="vposf">
-                  <div className="blok_title"><p>Печатные машинки</p></div>
-                </div>
-                <div className="child bg-6"></div>
-              </div>
-            </a>
-          </div>
+              <a href="/exhibit/exhibitslist/?limit=8&offset=0&categories=awards" className="knopka">
+              <img src="/catalog/122.jpg" alt="Several hands holding beer glasses" className="scale"></img>
+              </a>
+            
+            </div>
+            <figcaption><h3>Типография</h3></figcaption>
+        </figure>
+      </li>
 
-
+      <li>
+        <figure> 
           <div className="itemNews">
-            <a href="/exhibit/exhibitslist/?limit=6&offset=0&categories=tv" className="knopka">
-              <div className="vozm">
-                <div className="vposf">
-                  <div className="blok_title"> <p>Телевизоры</p></div>
-                </div>
-                <div className="child bg-7"></div>
-              </div>
-            </a>
-          </div>
+              <a href="/exhibit/exhibitslist/?limit=8&offset=0&categories=awards" className="knopka">
+              <img src="/catalog/z002.jpg" alt="Several hands holding beer glasses" className="scale"></img>
+              </a>
+            
+            </div>
+            <figcaption><h3>Компьютеры</h3></figcaption>
+        </figure>
+      </li>
 
+      <li>
+        <figure> 
           <div className="itemNews">
-            <a href="/exhibit/exhibitslist/?limit=6&offset=0&categories=guns" className="knopka">
-              <div className="vozm">
-                <div className="vposf">
-                  <div className="blok_title">
-                    <p>Оружие</p>
-                  </div>
-                </div>
-                <div className="child bg-8">
-                </div>
-              </div>
-            </a>
-          </div>
+              <a href="/exhibit/exhibitslist/?limit=8&offset=0&categories=awards" className="knopka">
+              <img src="/catalog/z005.jpg" alt="Several hands holding beer glasses" className="scale"></img>
+              </a>
+            
+            </div>
+            <figcaption><h3>Печатные машинки</h3></figcaption>
+        </figure>
+      </li>
 
-
+      <li>
+        <figure> 
           <div className="itemNews">
-            <a href="/exhibit/exhibitslist/?limit=6&offset=0&categories=phvtech" className="knopka">
-              <div className="vozm">
-                <div className="vposf">
-                  <div className="blok_title">
-                    <p>Фото и видео техника</p>
-                  </div>
-                </div>
-                <div className="child bg-9">
-                </div>
-              </div>
-            </a>
-          </div>
+              <a href="/exhibit/exhibitslist/?limit=8&offset=0&categories=awards" className="knopka">
+              <img src="/catalog/z012.jpg" alt="Several hands holding beer glasses" className="scale"></img>
+              </a>
+            
+            </div>
+            <figcaption><h3>Телевизоры</h3></figcaption>
+        </figure>
+      </li>
+      
+      <li>
+        <figure> 
+          <div className="itemNews">
+              <a href="/exhibit/exhibitslist/?limit=8&offset=0&categories=awards" className="knopka">
+              <img src="/catalog/z012.jpg" alt="Several hands holding beer glasses" className="scale"></img>
+              </a>
+            
+            </div>
+            <figcaption><h3>Оружие</h3></figcaption>
+        </figure>
+      </li>
 
+      <li>
+        <figure> 
+          <div className="itemNews">
+              <a href="/exhibit/exhibitslist/?limit=8&offset=0&categories=awards" className="knopka">
+              <img src="/catalog/z027.jpg" alt="Several hands holding beer glasses" className="scale"></img>
+              </a>
+            
+            </div>
+            <figcaption><h3>Фото- и видеотехника</h3></figcaption>
+        </figure>
+      </li>
 
-        </div>
-      </div>
-      <Footer />
-    </div>
+    </ul>
+  </section>
+</main>
+</div>
+<Footer/>
+
+</div>
   )
 }
 
