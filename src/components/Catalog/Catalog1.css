@@ -9,8 +9,7 @@
     flex-direction: column;
     padding-bottom: 50px; /*нижний внутренний отступ*/
     background: rgb(236, 245, 255);
-    height: 1300px;
-  }
+}   
 
 h1 { 
     text-align: center;
@@ -124,13 +123,13 @@ h1 {
 
 
 .itemNews{
-    border: 5px  solid #002b58;
+   
     width: 350px;
     height: 300px;
     
 }
 
-@media (min-width: 900px)  and (max-width: 1300px){
+/* @media (min-width: 900px)  and (max-width: 1300px){
     .contentCat {
         width: inherit;
         display: flex;
@@ -140,7 +139,7 @@ h1 {
     }
 
     .itemNews {
-        border: 2px  solid #002b58;
+        
         width: 250px;
         height: 250px;
         
@@ -189,7 +188,43 @@ h1 {
         font-size:15px;
         line-height: 17px;
         text-align: center;
-    }
+    }   
+} */
+
+html {
+    scroll-behavior: smooth;
+  }
+  .breweries {
+    padding: 2rem;
+  }
+
+  .breweries > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+  }
   
+  .breweries > ul > li {
+    border: 1px solid #E2E2E2;
+    border-radius: .5rem;
+    width: 350px;
+    max-height: 300px;
+  }
+  
+  .breweries > ul > li > figure {
    
+    overflow: hidden;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    position: relative;
+  }
+  
+  .breweries > ul > li > figure > img {
+    width: 100%;
+  }
+  .breweries > ul > li > figure > figcaption {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0,0,0,.7);
+  width: 100%;
 }
