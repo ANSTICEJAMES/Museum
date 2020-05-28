@@ -126,21 +126,6 @@ function Catalog() {
           </div>
 
 
-          <div className="itemNews">
-            <a href="/exhibit/exhibitslist/?limit=6&offset=0&categories=other" className="knopka">
-              <div className="vozm">
-                <div className="vposf">
-                  <div className="blok_title">
-                    <p>Прочее</p>
-                  </div>
-                </div>
-                <div className="child bg-9">
-                </div>
-              </div>
-            </a>
-          </div>
-
-
         </div>
       </div>
       <Footer />
