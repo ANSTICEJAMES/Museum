@@ -4,14 +4,19 @@
   max-height: 105px;
   color: #002b58;
   width: 100%; /* Ширина слоя */
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   z-index: 9999;
     position: relative;
     opacity: 0.99;
    box-shadow: 0 0 20px rgba(0,0,0,1);
 }
+
+
+
+/*.header_align{*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: space-around;*/
+/*}*/
 
 .logo{
     max-height: 80px;

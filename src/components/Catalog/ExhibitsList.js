@@ -9,8 +9,10 @@ import Element from '../Catalog/Element'
 import Loader from "../Other/Loader"
 import words from "../../words"
 import Pagination from "react-js-pagination";
+import "./bootstrap.css"
+// import "./bootstrap-theme.css"
 
-// require("bootstrap/less/bootstrap.less");
+
 
 export class ExhibitsList extends Component {
 
@@ -57,6 +59,7 @@ export class ExhibitsList extends Component {
         const {categories} = queryString.parse(this.state.query)
         this.getExhibits((pageNumber - 1), categories,
             (exhibits) => {
+
                 this.setState({
                         exhibits: exhibits.data.responseData,
                         isLoading: true,
@@ -64,7 +67,7 @@ export class ExhibitsList extends Component {
                             offset: pageNumber,
                             countAllExhibits: exhibits.data.count,
                             countMaxPages: exhibits.data.countMaxPages,
-
+                            limit: 8,
 
                         }
                     }
@@ -81,37 +84,40 @@ export class ExhibitsList extends Component {
 
         return (
 
-            <div className='Category'>
-
-                <Header/>
+            <div className='main_wrap'>
+                    <Header/>
+                <div className="main_container">
                 {isLoading ?
-                    <div className="contentList">
-                        <div className="nameCategory"><h3>{words[query.categories]}</h3></div>
-                        <ul className="grid-container">
+                        <div className="contentList">
+                            <div className="nameCategory"><h3>{words[query.categories]}</h3></div>
+                            <ul className="grid-container">
 
-                            {
-                                exhibits ? exhibits.map(exhibit => {
-                                    return (
-                                        <Link to={`/exhibit/${exhibit.uid}`} key={exhibit.uid}>
-                                            <Element exhibit={exhibit}/>
-                                        </Link>
-                                    )
-                                }) : (<li>Нет экспонатов</li>)
-                            }
+                                {
+                                    exhibits ? exhibits.map(exhibit => {
+                                        return (
+                                            <Link to={`/exhibit/${exhibit.uid}`} key={exhibit.uid}>
+                                                <Element exhibit={exhibit}/>
+                                            </Link>
+                                        )
+                                    }) : (<li>Нет экспонатов</li>)
+                                }
 
 
-                        </ul>
-                        <Pagination
-                            activePage={this.state.pageData.offset}
-                            itemsCountPerPage={this.state.pageData.limit}
-                            totalItemsCount={this.state.pageData.countAllExhibits}
-                            // pageRangeDisplayed={4}
-                            onChange={this.handlePageChange.bind(this)}
-                        />
-                    </div>
+                            </ul>
+                            {exhibits.length ? <Pagination
+                                activePage={this.state.pageData.offset}
+                                itemsCountPerPage={this.state.pageData.limit}
+                                totalItemsCount={this.state.pageData.countAllExhibits}
+                                onChange={this.handlePageChange.bind(this)}
+                            /> : ''}
 
-                    : <Loader/>}
+                        </div>
+
+                        : <Loader/>}
+                </div>
+
                 <Footer/>
+
             </div>
         )
 

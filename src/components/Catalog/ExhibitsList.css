@@ -1,7 +1,16 @@
+ul{
+    padding: 30px 30px 0 30px;
+}
+
+
+
 .contentList {
-    padding-bottom: 50px; /*нижний внутренний отступ*/
+    /*padding-bottom: 50px; !*нижний внутренний отступ*!*/
+    max-width: 1100px;
     min-height: 600px;
-    background: rgb(236, 245, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
  .nameCategory {
@@ -14,10 +23,13 @@
  }
 
   .grid-container {
+      /*align-items: center;*/
+      /*justify-items: center;*/
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: calc(10px + 1%);
+   grid-column-gap: calc(10px + 5%);
     grid-template-areas: ". . ." ". . ." ". . ." ". . .";
+    grid-row-gap: 40px;
   }
   
