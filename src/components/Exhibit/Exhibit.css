@@ -43,7 +43,7 @@
 	min-height: 30px;
 }
 
-@media (max-width: 670px) {
+@media (max-width: 768px) {
 
 	.contentExhibit{
 		display: flex;
@@ -53,13 +53,23 @@
 	}
 
 	.left{
+		max-width: 600px;
+		margin: 30px 30px 0 30px;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
 	}
 
+	.about{
+		text-align: justify;
+		max-width: 600px;
 
+	}
 	.nameplate{
 		display:none;
+	}
+
+	.right{
+		margin: 0 30px 0 30px;
 	}
 }
