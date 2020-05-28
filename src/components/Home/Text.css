@@ -37,9 +37,9 @@
 
 
 @media (max-width: 650px) {
-    p {
-        font-size: 10px;
-    }
+    /*p {*/
+    /*    font-size: 10px;*/
+    /*}*/
 
     .images {
         width: 270px;
@@ -54,7 +54,7 @@
     }
 
     .content {
-        width: 400px;
+        max-width: 400px;
         padding-bottom: 20px;
 
     }

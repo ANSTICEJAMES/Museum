@@ -15,17 +15,17 @@ function Footer() {
 
                     <div className="contact">
                         <div className="adress">
-                            <a href="https://goo.gl/maps/kGsTTQrmHwpS8H7a6" target="_blank"><img src={iconmap} alt="Tel" width="20" height="20"></img></a>
-                            Адрес: 237000, Россия, Ростовская обл., г. Таганрог, ул. Чехова, 22, корп."Б", 2-й подъезд
+                            <a href="https://goo.gl/maps/kGsTTQrmHwpS8H7a6" target="_blank"><img src={iconmap} className="icon"></img></a>
+                            <p>Адрес: 237000, Россия, Ростовская обл., г. Таганрог, ул. Чехова, 22, корп."Б", 2-й подъезд</p>
                         </div>
-                        <div className="proictis"> <a href="https://proictis.ru/" target="_blank"><img src={proictis} alt="proictis" height="40"></img></a></div>
-                        <div className="phone"> <img src={iconphone} alt="Tel" width="20" height="20"></img> 8(863)-437-14-61</div>
+                        <div className="proictis"> <a href="https://proictis.ru/" target="_blank"><img src={proictis} alt="proictis" className="proictis_img"></img></a></div>
+                        <div className="phone"> <img src={iconphone} className="icon"></img> <p>8(863)-437-14-61</p></div>
 
                     </div>
                 </div>
             </div>
 
-            <div className="copyright"> &copy; 2020 Политехнический музей ЮФУ. Все права защищены.</div>
+            <div className="copyright"> <p>&copy; 2020 Политехнический музей ЮФУ. Все права защищены.</p></div>
         </div>
 
 

@@ -20,19 +20,29 @@
 }
 
 .adress {
-
-  width: 400px;
+  max-width: 400px;
   height: 55px;
 }
 .phone {
   text-align: right;
-  width: 400px;
+  max-width: 400px;
   height: 30px;
 }
 
 .copyright {
-  font-size: 6pt;
+  font-size: 12pt;
   margin: auto;
-  width: 450px;
+  max-width: 450px;
   text-align: center;
+}
+.proictis_img{
+  width: 150px;
+}
+.icon {
+  width: 20px;
+}
+
+@media (max-width: 768px) {
+
+
 }

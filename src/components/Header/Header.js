@@ -23,7 +23,7 @@ function Header() {
                         </div>
                     </div>
                     <a href="http://sfedu.ru/">
-                        <div className="logo_sfedu"> <a href="https://sfedu.ru/" target="_blank" img className="logo"><img src={sfedu} alt="Логотип"  width="70" height="70"></img></a></div>
+                        <div> <a href="https://sfedu.ru/" target="_blank" ><img src={sfedu} className="logo" alt="Логотип"  ></img></a></div>
                     </a>
                 </div>
 

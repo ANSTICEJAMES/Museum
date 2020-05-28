@@ -16,3 +16,20 @@
     align-items: center;
     justify-content: space-around;
 }
+
+@media (max-width: 376px) {
+
+    p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 426px) {
+
+    p {
+        font-size: 11px;
+    }
+}
+
+
+
