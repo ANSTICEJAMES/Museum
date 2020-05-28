@@ -10,18 +10,26 @@ import Text from './Text';
 function Home() {
     return (
         <>
-            <Header/>
+            <div className='main_wrap'>
 
-            <div className='Home'>
-                <div className="content">
-                    <div className="carousel">
-                        <Carousel/>
-                    </div>
-                    <div className="text">
-                        <Text/>
+                <Header/>
+                <div className="carousel">
+                    <Carousel/>
+                </div>
+                <div className="main_container">
+                    <div className='Home'>
+                        <div className="content">
+
+                            <div className="text">
+                                <Text/>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
+
+
             <Footer/>
 
         </>
