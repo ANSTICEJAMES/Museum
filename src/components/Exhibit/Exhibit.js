@@ -66,12 +66,12 @@ class Exhibit extends Component {
                                             <div className="namexx"><h4>{name}</h4></div>
                                         </div>
                                         <div className="common">
-                                            <div className="about"><h6>
+                                            {description ? <div className="about"><h6>
                                                 Описание экспоната
                                             </h6>
                                                 <p>{description}</p>
 
-                                            </div>
+                                            </div> : '' }
 
                                         </div>
 
@@ -106,20 +106,22 @@ class Exhibit extends Component {
                                                     }
 
                                                 </ul>
-                                                <a className="carousel-control-prev" href="#carouselExampleIndicators"
-                                                   role="button"
-                                                   data-slide="prev">
+
+                                                { (image.length > 1) ? <a className="carousel-control-prev" href="#carouselExampleIndicators"
+                                                                          role="button"
+                                                                          data-slide="prev">
                                                     <span className="carousel-control-prev-icon"
                                                           aria-hidden="true"></span>
-                                                    <span className="sr-only">Previous</span>
-                                                </a>
-                                                <a className="carousel-control-next" href="#carouselExampleIndicators"
-                                                   role="button"
-                                                   data-slide="next">
+                                                        <span className="sr-only">Previous</span>
+                                                    </a> : '' }
+                                                { (image.length > 1) ? <a className="carousel-control-next" href="#carouselExampleIndicators"
+                                                       role="button"
+                                                       data-slide="next">
                                                     <span className="carousel-control-next-icon"
                                                           aria-hidden="true"></span>
-                                                    <span className="sr-only">Next</span>
-                                                </a>
+                                                        <span className="sr-only">Next</span>
+                                                    </a> : '' }
+
                                             </div>
                                         </div>
 

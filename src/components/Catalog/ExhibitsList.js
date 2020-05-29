@@ -106,7 +106,9 @@ export class ExhibitsList extends Component {
                                 }
 
                             </ul>
-                            {exhibits.length ? <Pagination
+
+
+                            {(exhibits.length && this.state.pageData.countAllExhibits>8)  ? <Pagination
                                 activePage={this.state.pageData.offset}
                                 itemsCountPerPage={this.state.pageData.limit}
                                 totalItemsCount={this.state.pageData.countAllExhibits}
