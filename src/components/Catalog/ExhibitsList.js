@@ -32,7 +32,6 @@ export class ExhibitsList extends Component {
     }
 
     componentDidMount() {
-        console.log("didMount")
 
         const { offset, categories } = queryString.parse(this.state.query)
         this.getExhibits(offset, categories,
@@ -74,7 +73,6 @@ export class ExhibitsList extends Component {
                     }
                 }
                 )
-                console.log(exhibits)
             }
         )
     }
