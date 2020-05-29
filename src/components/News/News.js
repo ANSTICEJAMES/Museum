@@ -9,23 +9,24 @@ import * as serviceWorker from '../../serviceWorker'
 
 function News() {
     return (
-        <>        <Header/>
-            <div className='News'>
-                <div className="content">
+        <>
+            <div className='main_wrap'>
+                <Header/>
+                <div className="main_container">
 
 
-
-                    <div className="card-news-body">
-                        <img src={ph3} className="news-img" alt="иконка новости"></img>
-                        <h5 className="news-text">НОВОСТИ</h5>
-                    </div>
-
-                    <div className="text">
-                        <Text/>
-                    </div>
+                            <div className="news_main_wrap">
+                                <div className="card-news-body">
+                                    <img src={ph3} className="news-img" alt="иконка новости"></img>
+                                    <h5 className="news-text">НОВОСТИ</h5>
+                                </div>
+                                <Text/>
+                            </div>
 
                 </div>
             </div>
+
+
             <Footer/>
 
         </>

@@ -1,16 +1,25 @@
-.card-deck{
-	margin-top: 50px;
-	margin-bottom: 50px;
-	margin-left: 19%;
-	margin-right: 19%;
 
-}
 .calendar-img{
 	float: left;
 	max-height: 25px;
 	max-width: 25px;
 }
-.calendar-text{
-	float: left;
-	margin-left: 15px;
+
+.card_img{
+	width: 200px;
+}
+
+
+.image_date{
+	display: flex;
+	flex-direction: column;
+}
+
+.news_wrap{
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	max-width: 1000px;
+	align-items: center;
+	justify-content: space-around;
 }
