@@ -2,7 +2,7 @@ import React from 'react';
 import image0 from '../../images/home/0.jpg';
 import image1 from '../../images/home/1.jpg';
 import image2 from '../../images/home/2.jpg';
-
+import './Carousel.css';
 function Carousel() {
     return (
         <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval="3500">

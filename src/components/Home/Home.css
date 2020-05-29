@@ -1,7 +1,7 @@
 
 
 .carousel {
-  max-height: 350px; /* Высота блока */
+  /*max-height: 350px; !* Высота блока *!*/
   max-width: 100%;
   overflow: hidden;
   margin: auto;
