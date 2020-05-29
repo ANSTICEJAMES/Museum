@@ -15,7 +15,7 @@ h1 {
 }
 
 .itemNews{ 
-    /* размер картинки */
+    
     width: 350px;
     height: 300px;
     
@@ -54,7 +54,7 @@ h1 {
 }
   
 .breweries > ul > li > figure {
-      border: 1px solid rgb(209, 209, 209);
+    border: 1px solid rgb(209, 209, 209);
     border-radius: 7px 7px;
     overflow: hidden;
     border-top-left-radius: .5rem;
@@ -80,3 +80,50 @@ h1 {
   padding: .75rem;
   font-size: 1.25rem;
 }
+
+@media (min-width: 376px) and (max-width: 424px){  /* Mobile M */
+ 
+    .breweries > ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        align-items: center;
+        grid-gap: 1rem;
+    }
+
+    .breweries > ul > li {
+        border: 1px solid #E2E2E2;
+        border-radius: .1rem;
+        width: 87%;
+        height: 90%; 
+    }  
+
+}
+
+@media (min-width: 318px) and (max-width: 375px){ /* Mobile S */
+ 
+    .breweries > ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+        align-items: center;
+        margin: auto;
+        grid-gap: 1rem;
+    }
+
+    .breweries > ul > li {
+        border: 1px solid #E2E2E2;
+        border-radius: .1rem;
+        width: 87%;
+        height: 90%; 
+    }  
+
+    .breweries > ul > li > figure {
+        border: 1px solid rgb(209, 209, 209);
+        border-radius: 7px 7px;
+        overflow: hidden;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+        position: relative;
+        
+    }
+}
+
