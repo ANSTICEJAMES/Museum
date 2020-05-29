@@ -9,9 +9,6 @@ import './Exhibit.css'
 import notphoto from './notphoto.png'
 import Loader from "../Other/Loader"
 
-import sss from './sonata.jpg'
-import www from '../../images/home/0.jpg'
-
 
 class Exhibit extends Component {
 
@@ -84,7 +81,7 @@ class Exhibit extends Component {
 
                                             <div id="carouselExampleIndicators" className="carousel slide"
                                                  data-ride="carousel"
-                                                // data-interval="3500"
+                                                data-interval="3500"
                                             >
                                                 <ul className="carousel-inner">
                                                     {

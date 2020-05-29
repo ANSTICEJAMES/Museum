@@ -19,11 +19,11 @@ function Header() {
                         <div className="nav">
                             <Link to="/news"> Новости </Link>
                             <Link to="/catalog"> Экспонаты </Link>
-                            <a href="http://sfedu.ru/">Официальный сайт ЮФУ</a>
+                            <a href="http://sfedu.ru/" target="_blank" >Официальный сайт ЮФУ</a>
                         </div>
                     </div>
-                    <a href="http://sfedu.ru/">
-                        <div> <a href="https://sfedu.ru/" target="_blank" ><img src={sfedu} className="logo" alt="Логотип"  ></img></a></div>
+                    <a href="http://sfedu.ru/" target="_blank">
+                        <div> <img src={sfedu} className="logo" alt="Логотип"/></div>
                     </a>
                 </div>
 

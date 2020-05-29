@@ -7,6 +7,7 @@ html {
     flex-direction: column;
     padding-bottom: 50px; /*нижний внутренний отступ*/
     background: rgb(236, 245, 255);
+    min-height: 90vh;
 }   
 
 h1 { 

@@ -3,7 +3,7 @@
     float: left;
     max-height: 25px;
     max-width: 25px;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .card_img {
@@ -18,7 +18,7 @@
 .image_date {
     display: flex;
     justify-content: space-between;
-    max-width: 300px;
+    max-width: 230px;
 }
 
 .news_wrap {

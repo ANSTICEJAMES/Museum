@@ -7,10 +7,10 @@ ul{
 .contentList {
     /*padding-bottom: 50px; !*нижний внутренний отступ*!*/
     max-width: 1100px;
-    min-height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 80vh;
   }
   
  .nameCategory {

@@ -10,7 +10,6 @@ import Loader from "../Other/Loader"
 import words from "../../words"
 import Pagination from "react-js-pagination";
 import "./bootstrap.css"
-// import "./bootstrap-theme.css"
 
 
 
@@ -44,7 +43,8 @@ export class ExhibitsList extends Component {
                     countMaxPages: +exhibits.data.countMaxPages,
                     countAllExhibits: +exhibits.data.count,
                     limit: 8,
-                    offset: +offset
+                    offset: +offset,
+                    categories
                 },
             }))
     }
@@ -68,6 +68,8 @@ export class ExhibitsList extends Component {
                             countAllExhibits: exhibits.data.count,
                             countMaxPages: exhibits.data.countMaxPages,
                             limit: 8,
+                            categories
+
 
                         }
                     }
@@ -80,20 +82,21 @@ export class ExhibitsList extends Component {
 
     render() {
 
-        const {exhibits, isLoading, query} = this.state;
+        const {exhibits, isLoading, pageData} = this.state;
 
         return (
 
             <div className='main_wrap'>
                     <Header/>
+                <div className="nameCategory"><h3>{words[pageData.categories]}</h3></div>
+
                 <div className="main_container">
                 {isLoading ?
                         <div className="contentList">
-                            <div className="nameCategory"><h3>{words[query.categories]}</h3></div>
                             <ul className="grid-container">
 
                                 {
-                                    exhibits ? exhibits.map(exhibit => {
+                                    exhibits.length ? exhibits.map(exhibit => {
                                         return (
                                             <Link to={`/exhibit/${exhibit.uid}`} key={exhibit.uid}>
                                                 <Element exhibit={exhibit}/>
