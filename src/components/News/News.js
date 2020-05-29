@@ -15,19 +15,20 @@ function News() {
                 <div className="main_container">
 
 
-                            <div className="news_main_wrap">
-                                <div className="card-news-body">
-                                    <img src={ph3} className="news-img" alt="иконка новости"></img>
-                                    <h5 className="news-text">НОВОСТИ</h5>
-                                </div>
-                                <Text/>
-                            </div>
+                    <div className="news_main_wrap">
+                        <div className="card-news-body">
+                            <img src={ph3} className="news-img" alt="иконка новости"></img>
+                            <h5 className="news-text">НОВОСТИ</h5>
+                        </div>
+                        <Text/>
+                    </div>
+
 
                 </div>
+                <Footer/>
+
             </div>
 
-
-            <Footer/>
 
         </>
 
