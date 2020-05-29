@@ -2,6 +2,13 @@
 	min-height: 100vh;
 }
 
+
+.namex div {
+	display: inline-block;		
+	background-color:rgb(245, 219, 181);		
+	color: #002b58;		
+}	
+
 .contentExhibit{
 	display: flex;
 	flex-direction: row;

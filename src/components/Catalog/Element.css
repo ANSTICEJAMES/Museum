@@ -1,10 +1,35 @@
 
-.card {
-   
-    color: #002b58;
-    
+ 
+ figure {
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 7px 7px;
+    overflow: hidden;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    position: relative;
+ }
+ 
+figure > figcaption {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,.7);
+    width: 100%;
+}
+
+ figure > figcaption > h5 {
+    color: white;
+    text-align: center;
+    padding: .75rem;
+    font-size: 1.25rem;
+  }
+
+ figure > img{
     width: 250px;
-    height: 230px;
+    height: 250px;
+}
+
+h5 {
+    padding-left: 10px;
 }
 
 li {
