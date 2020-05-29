@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Link} from "react-router-dom"
+import React, { Component } from 'react';
+import { Link } from "react-router-dom"
 import axios from 'axios'
 import './ExhibitsList.css'
 import queryString from 'query-string';
@@ -34,7 +34,7 @@ export class ExhibitsList extends Component {
     componentDidMount() {
         console.log("didMount")
 
-        const {offset, categories} = queryString.parse(this.state.query)
+        const { offset, categories } = queryString.parse(this.state.query)
         this.getExhibits(offset, categories,
             (exhibits) => this.setState({
                 exhibits: exhibits.data.responseData,
@@ -56,23 +56,23 @@ export class ExhibitsList extends Component {
     };
 
     handlePageChange(pageNumber) {
-        const {categories} = queryString.parse(this.state.query)
+        const { categories } = queryString.parse(this.state.query)
         this.getExhibits((pageNumber - 1), categories,
             (exhibits) => {
 
                 this.setState({
-                        exhibits: exhibits.data.responseData,
-                        isLoading: true,
-                        pageData: {
-                            offset: pageNumber,
-                            countAllExhibits: exhibits.data.count,
-                            countMaxPages: exhibits.data.countMaxPages,
-                            limit: 8,
-                            categories
+                    exhibits: exhibits.data.responseData,
+                    isLoading: true,
+                    pageData: {
+                        offset: pageNumber,
+                        countAllExhibits: exhibits.data.count,
+                        countMaxPages: exhibits.data.countMaxPages,
+                        limit: 8,
+                        categories
 
 
-                        }
                     }
+                }
                 )
                 console.log(exhibits)
             }
@@ -82,29 +82,28 @@ export class ExhibitsList extends Component {
 
     render() {
 
-        const {exhibits, isLoading, pageData} = this.state;
+        const { exhibits, isLoading, pageData } = this.state;
 
         return (
-
-            <div className='main_wrap'>
-                    <Header/>
-                <div className="nameCategory"><h3>{words[pageData.categories]}</h3></div>
-
-                <div className="main_container">
-                {isLoading ?
-                        <div className="contentList">
+            <div>
+                <Header />
+                <div className="contentList">
+                    <main class="wrapper">
+                        <section class="title">
+                        <h1>{words[pageData.categories]}</h1>
+                        </section>
+                        <section class="list" >
                             <ul className="grid-container">
-
                                 {
                                     exhibits.length ? exhibits.map(exhibit => {
                                         return (
-                                            <Link to={`/exhibit/${exhibit.uid}`} key={exhibit.uid}>
-                                                <Element exhibit={exhibit}/>
-                                            </Link>
+                                                <Link to={`/exhibit/${exhibit.uid}`} key={exhibit.uid}>
+                                                    <Element exhibit={exhibit}/>
+                                                </Link> 
+                                                
                                         )
-                                    }) : (<li>Нет экспонатов</li>)
+                                    }) : (<p>В этой категории пока нет экспонатов</p>)
                                 }
-
 
                             </ul>
                             {exhibits.length ? <Pagination
@@ -113,14 +112,12 @@ export class ExhibitsList extends Component {
                                 totalItemsCount={this.state.pageData.countAllExhibits}
                                 onChange={this.handlePageChange.bind(this)}
                             /> : ''}
+                        </section>
+                    </main>
 
-                        </div>
 
-                        : <Loader/>}
                 </div>
-
-                <Footer/>
-
+                <Footer />
             </div>
         )
 

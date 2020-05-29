@@ -1,8 +1,10 @@
 
 .card {
-    width: 100%;
+   
     color: #002b58;
-    height: 300px;
+    
+    width: 250px;
+    height: 230px;
 }
 
 li {
