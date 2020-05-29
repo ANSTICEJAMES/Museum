@@ -57,7 +57,7 @@ function Catalog() {
         <figure> 
           <div className="itemNews">
               <a href="/exhibit/exhibitslist/?limit=8&offset=0&categories=awards" className="knopka">
-              <img src="/catalog/122.jpg" alt="Several hands holding beer glasses" className="scale"></img>
+              <img src="/catalog/tipography.jpg" alt="Several hands holding beer glasses" className="scale"></img>
               </a>
             
             </div>
@@ -69,7 +69,7 @@ function Catalog() {
         <figure> 
           <div className="itemNews">
               <a href="/exhibit/exhibitslist/?limit=8&offset=0&categories=awards" className="knopka">
-              <img src="/catalog/z002.jpg" alt="Several hands holding beer glasses" className="scale"></img>
+              <img src="/catalog/computers.jpg" alt="Several hands holding beer glasses" className="scale"></img>
               </a>
             
             </div>
@@ -81,7 +81,7 @@ function Catalog() {
         <figure> 
           <div className="itemNews">
               <a href="/exhibit/exhibitslist/?limit=8&offset=0&categories=awards" className="knopka">
-              <img src="/catalog/z005.jpg" alt="Several hands holding beer glasses" className="scale"></img>
+              <img src="/catalog/pechmach.jpg" alt="Several hands holding beer glasses" className="scale"></img>
               </a>
             
             </div>
@@ -93,7 +93,7 @@ function Catalog() {
         <figure> 
           <div className="itemNews">
               <a href="/exhibit/exhibitslist/?limit=8&offset=0&categories=awards" className="knopka">
-              <img src="/catalog/z012.jpg" alt="Several hands holding beer glasses" className="scale"></img>
+              <img src="/catalog/television.jpg" alt="Several hands holding beer glasses" className="scale"></img>
               </a>
             
             </div>
@@ -105,7 +105,7 @@ function Catalog() {
         <figure> 
           <div className="itemNews">
               <a href="/exhibit/exhibitslist/?limit=8&offset=0&categories=awards" className="knopka">
-              <img src="/catalog/z012.jpg" alt="Several hands holding beer glasses" className="scale"></img>
+              <img src="/catalog/oruzhie.jpg" alt="Several hands holding beer glasses" className="scale"></img>
               </a>
             
             </div>
@@ -117,7 +117,7 @@ function Catalog() {
         <figure> 
           <div className="itemNews">
               <a href="/exhibit/exhibitslist/?limit=8&offset=0&categories=awards" className="knopka">
-              <img src="/catalog/z027.jpg" alt="Several hands holding beer glasses" className="scale"></img>
+              <img src="/catalog/photo.jpg" alt="Several hands holding beer glasses" className="scale"></img>
               </a>
             
             </div>
