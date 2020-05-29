@@ -1,25 +1,42 @@
 
-.calendar-img{
-	float: left;
-	max-height: 25px;
-	max-width: 25px;
+.calendar-img {
+    float: left;
+    max-height: 25px;
+    max-width: 25px;
+    margin-right: 10px;
 }
 
-.card_img{
-	width: 200px;
+.card_img {
+    width: 310px;
 }
 
 
-.image_date{
-	display: flex;
-	flex-direction: column;
+.image {
+    padding-top: 25px;
 }
 
-.news_wrap{
-	margin: auto;
-	display: flex;
-	flex-direction: column;
-	max-width: 1000px;
-	align-items: center;
-	justify-content: space-around;
+.image_date {
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+}
+
+.news_wrap {
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+    .news_wrap {
+        margin-left: 0;
+
+    }
+
+    .card_img {
+        width: 200px;
+    }
 }
